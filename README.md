@@ -18,11 +18,11 @@ The system leverages the spectator HUD used in professional broadcasts, which di
 
 Watch a 1-minute demo showing real-time event detection on a live round:
 
-<video src="https://github.com/SphinxNumberNine/valoscribe/raw/main/demo.mp4" controls width="100%"></video>
+[![Valoscribe Demo](https://img.youtube.com/vi/xKsUO7c6Hbw/maxresdefault.jpg)](https://youtu.be/xKsUO7c6Hbw)
+
+**[▶️ Watch Demo on YouTube](https://youtu.be/xKsUO7c6Hbw)**
 
 The demo shows the terminal output side-by-side with the game footage, displaying events as they're detected (kills, abilities, round transitions, player states).
-
-> **Note:** If the video doesn't play, [click here to download](https://github.com/SphinxNumberNine/valoscribe/raw/main/demo.mp4)
 
 ## Key Features
 
