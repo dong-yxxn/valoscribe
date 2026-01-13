@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542204/mibr-vs-rex-regum-qeon-valorant-champions-2025-decider-b?game=all&tab=overview",
+  "teams": [
+    "MIBR",
+    "Rex Regum Qeon"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/Nsg2sCPu7vY?t=118",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "waylay"
+            },
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            },
+            {
+              "name": "cortezia",
+              "agent": "viper"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            }
+          ]
+        },
+        {
+          "name": "Rex Regum Qeon",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Jemkin",
+              "agent": "waylay"
+            },
+            {
+              "name": "Monyet",
+              "agent": "neon"
+            },
+            {
+              "name": "xffero",
+              "agent": "viper"
+            },
+            {
+              "name": "crazyguy",
+              "agent": "omen"
+            },
+            {
+              "name": "Kushy",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/hZD7kaU38ZE?t=70",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "xenom",
+              "agent": "astra"
+            },
+            {
+              "name": "aspas",
+              "agent": "jett"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "cortezia",
+              "agent": "cypher"
+            },
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            }
+          ]
+        },
+        {
+          "name": "Rex Regum Qeon",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Jemkin",
+              "agent": "jett"
+            },
+            {
+              "name": "xffero",
+              "agent": "cypher"
+            },
+            {
+              "name": "Monyet",
+              "agent": "omen"
+            },
+            {
+              "name": "crazyguy",
+              "agent": "sova"
+            },
+            {
+              "name": "Kushy",
+              "agent": "kayo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Haven",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "Rex Regum Qeon",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

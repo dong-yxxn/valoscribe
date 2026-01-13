@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Team Liquid",
+      "starting_side": "attack"
+    },
+    {
+      "name": "EDward Gaming",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "nAts",
+      "team": "Team Liquid",
+      "agent": "cypher"
+    },
+    {
+      "name": "kamo",
+      "team": "Team Liquid",
+      "agent": "yoru"
+    },
+    {
+      "name": "paTiTek",
+      "team": "Team Liquid",
+      "agent": "omen"
+    },
+    {
+      "name": "trexx",
+      "team": "Team Liquid",
+      "agent": "fade"
+    },
+    {
+      "name": "keiko",
+      "team": "Team Liquid",
+      "agent": "raze"
+    },
+    {
+      "name": "Smoggy",
+      "team": "EDward Gaming",
+      "agent": "omen"
+    },
+    {
+      "name": "nobody",
+      "team": "EDward Gaming",
+      "agent": "sova"
+    },
+    {
+      "name": "ZmjjKK",
+      "team": "EDward Gaming",
+      "agent": "neon"
+    },
+    {
+      "name": "Jieni7",
+      "team": "EDward Gaming",
+      "agent": "breach"
+    },
+    {
+      "name": "CHICHOO",
+      "team": "EDward Gaming",
+      "agent": "cypher"
+    }
+  ],
+  "map": "Sunset",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/S3RLocNSFfo?t=135",
+  "match_url": "https://www.vlr.gg/542209/team-liquid-vs-edward-gaming-valorant-champions-2025-elim-c?game=all&tab=overview"
+}

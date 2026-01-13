@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Rex Regum Qeon",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "Knight",
+      "team": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+      "agent": "sova"
+    },
+    {
+      "name": "Levius",
+      "team": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+      "agent": "cypher"
+    },
+    {
+      "name": "nephh",
+      "team": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+      "agent": "breach"
+    },
+    {
+      "name": "rushia",
+      "team": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+      "agent": "omen"
+    },
+    {
+      "name": "whzy",
+      "team": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+      "agent": "neon"
+    },
+    {
+      "name": "Monyet",
+      "team": "Rex Regum Qeon",
+      "agent": "omen"
+    },
+    {
+      "name": "Jemkin",
+      "team": "Rex Regum Qeon",
+      "agent": "waylay"
+    },
+    {
+      "name": "xffero",
+      "team": "Rex Regum Qeon",
+      "agent": "cypher"
+    },
+    {
+      "name": "crazyguy",
+      "team": "Rex Regum Qeon",
+      "agent": "breach"
+    },
+    {
+      "name": "Kushy",
+      "team": "Rex Regum Qeon",
+      "agent": "fade"
+    }
+  ],
+  "map": "Sunset",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/gFMaLciucxk?t=95",
+  "match_url": "https://www.vlr.gg/542203/bilibili-gaming-vs-rex-regum-qeon-valorant-champions-2025-elim-b?game=all&tab=overview"
+}

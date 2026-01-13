@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "DRX",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Team Liquid",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Bind",
+  "map_number": 3,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542210/drx-vs-team-liquid-valorant-champions-2025-decider-c?game=all&tab=overview"
+}

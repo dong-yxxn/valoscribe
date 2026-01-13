@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Paper Rex",
+      "starting_side": "defense"
+    },
+    {
+      "name": "G2 Esports",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "something",
+      "team": "Paper Rex",
+      "agent": "yoru"
+    },
+    {
+      "name": "PatMen",
+      "team": "Paper Rex",
+      "agent": "fade"
+    },
+    {
+      "name": "Jinggg",
+      "team": "Paper Rex",
+      "agent": "raze"
+    },
+    {
+      "name": "f0rsakeN",
+      "team": "Paper Rex",
+      "agent": "omen"
+    },
+    {
+      "name": "d4v41",
+      "team": "Paper Rex",
+      "agent": "vyse"
+    },
+    {
+      "name": "JonahP",
+      "team": "G2 Esports",
+      "agent": "fade"
+    },
+    {
+      "name": "leaf",
+      "team": "G2 Esports",
+      "agent": "viper"
+    },
+    {
+      "name": "trent",
+      "team": "G2 Esports",
+      "agent": "tejo"
+    },
+    {
+      "name": "jawgemo",
+      "team": "G2 Esports",
+      "agent": "yoru"
+    },
+    {
+      "name": "valyn",
+      "team": "G2 Esports",
+      "agent": "omen"
+    }
+  ],
+  "map": "Corrode",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/wIlTPrTANio?t=82",
+  "match_url": "https://www.vlr.gg/542265/paper-rex-vs-g2-esports-valorant-champions-2025-ubqf?game=all&tab=overview"
+}

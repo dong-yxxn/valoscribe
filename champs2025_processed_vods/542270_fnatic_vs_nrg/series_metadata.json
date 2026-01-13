@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542270/fnatic-vs-nrg-valorant-champions-2025-ubf?game=all&tab=overview",
+  "teams": [
+    "FNATIC",
+    "NRG"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/FOatagUO-Z0?t=168",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "vyse"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "sage"
+            }
+          ]
+        },
+        {
+          "name": "NRG",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "skuba",
+              "agent": "vyse"
+            },
+            {
+              "name": "brawk",
+              "agent": "sova"
+            },
+            {
+              "name": "s0m",
+              "agent": "omen"
+            },
+            {
+              "name": "Ethan",
+              "agent": "kayo"
+            },
+            {
+              "name": "mada",
+              "agent": "jett"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/MJoMoy7AUmc?t=155",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Chronicle",
+              "agent": "breach"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "kaajak",
+              "agent": "waylay"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "cypher"
+            },
+            {
+              "name": "Boaster",
+              "agent": "astra"
+            }
+          ]
+        },
+        {
+          "name": "NRG",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "skuba",
+              "agent": "vyse"
+            },
+            {
+              "name": "mada",
+              "agent": "yoru"
+            },
+            {
+              "name": "brawk",
+              "agent": "sova"
+            },
+            {
+              "name": "s0m",
+              "agent": "harbor"
+            },
+            {
+              "name": "Ethan",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Lotus",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "NRG",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "MIBR",
+      "starting_side": "defense"
+    },
+    {
+      "name": "DRX",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "aspas",
+      "team": "MIBR",
+      "agent": "jett"
+    },
+    {
+      "name": "cortezia",
+      "team": "MIBR",
+      "agent": "vyse"
+    },
+    {
+      "name": "Verno",
+      "team": "MIBR",
+      "agent": "sova"
+    },
+    {
+      "name": "xenom",
+      "team": "MIBR",
+      "agent": "omen"
+    },
+    {
+      "name": "artzin",
+      "team": "MIBR",
+      "agent": "kayo"
+    },
+    {
+      "name": "BeYN",
+      "team": "DRX",
+      "agent": "sova"
+    },
+    {
+      "name": "free1ng",
+      "team": "DRX",
+      "agent": "vyse"
+    },
+    {
+      "name": "Flashback",
+      "team": "DRX",
+      "agent": "yoru"
+    },
+    {
+      "name": "MaKo",
+      "team": "DRX",
+      "agent": "omen"
+    },
+    {
+      "name": "HYUNMIN",
+      "team": "DRX",
+      "agent": "waylay"
+    }
+  ],
+  "map": "Ascent",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/XBMbOuoBlTc?t=60",
+  "match_url": "https://www.vlr.gg/542276/mibr-vs-drx-valorant-champions-2025-lr2?game=all&tab=overview"
+}

@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Team Heretics",
+      "starting_side": "defense"
+    },
+    {
+      "name": "T1",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "RieNs",
+      "team": "Team Heretics",
+      "agent": "fade"
+    },
+    {
+      "name": "Wo0t",
+      "team": "Team Heretics",
+      "agent": "chamber"
+    },
+    {
+      "name": "Boo",
+      "team": "Team Heretics",
+      "agent": "omen"
+    },
+    {
+      "name": "MiniBoo",
+      "team": "Team Heretics",
+      "agent": "raze"
+    },
+    {
+      "name": "benjyfishy",
+      "team": "Team Heretics",
+      "agent": "deadlock"
+    },
+    {
+      "name": "iZu",
+      "team": "T1",
+      "agent": "yoru"
+    },
+    {
+      "name": "Meteor",
+      "team": "T1",
+      "agent": "vyse"
+    },
+    {
+      "name": "DH",
+      "team": "T1",
+      "agent": "omen"
+    },
+    {
+      "name": "BuZz",
+      "team": "T1",
+      "agent": "neon"
+    },
+    {
+      "name": "stax",
+      "team": "T1",
+      "agent": "fade"
+    }
+  ],
+  "map": "Lotus",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/_pyyIgNa758?t=69",
+  "match_url": "https://www.vlr.gg/542213/team-heretics-vs-t1-valorant-champions-2025-winners-d?game=all&tab=overview"
+}

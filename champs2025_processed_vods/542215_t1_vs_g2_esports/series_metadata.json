@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542215/t1-vs-g2-esports-valorant-champions-2025-decider-d?game=all&tab=overview",
+  "teams": [
+    "T1",
+    "G2 Esports"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/JZXllTCTdro?t=70",
+      "teams": [
+        {
+          "name": "T1",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "iZu",
+              "agent": "yoru"
+            },
+            {
+              "name": "Meteor",
+              "agent": "vyse"
+            },
+            {
+              "name": "stax",
+              "agent": "fade"
+            },
+            {
+              "name": "DH",
+              "agent": "omen"
+            },
+            {
+              "name": "BuZz",
+              "agent": "neon"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "valyn",
+              "agent": "omen"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "leaf",
+              "agent": "viper"
+            },
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/DLqfH6RzdwU?t=56",
+      "teams": [
+        {
+          "name": "T1",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "stax",
+              "agent": "fade"
+            },
+            {
+              "name": "DH",
+              "agent": "omen"
+            },
+            {
+              "name": "iZu",
+              "agent": "waylay"
+            },
+            {
+              "name": "Meteor",
+              "agent": "vyse"
+            },
+            {
+              "name": "BuZz",
+              "agent": "neon"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "leaf",
+              "agent": "viper"
+            },
+            {
+              "name": "valyn",
+              "agent": "omen"
+            },
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Sunset",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "T1",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

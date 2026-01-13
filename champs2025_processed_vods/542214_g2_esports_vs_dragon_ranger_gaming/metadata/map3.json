@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "G2 Esports",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Dragon Ranger Gaming",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Ascent",
+  "map_number": 3,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542214/g2-esports-vs-dragon-ranger-gaming-valorant-champions-2025-elim-d?game=all&tab=overview"
+}

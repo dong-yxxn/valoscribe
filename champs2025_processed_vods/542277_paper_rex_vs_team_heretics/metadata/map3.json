@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Paper Rex",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Team Heretics",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "PatMen",
+      "team": "Paper Rex",
+      "agent": "fade"
+    },
+    {
+      "name": "f0rsakeN",
+      "team": "Paper Rex",
+      "agent": "omen"
+    },
+    {
+      "name": "d4v41",
+      "team": "Paper Rex",
+      "agent": "vyse"
+    },
+    {
+      "name": "something",
+      "team": "Paper Rex",
+      "agent": "yoru"
+    },
+    {
+      "name": "Jinggg",
+      "team": "Paper Rex",
+      "agent": "raze"
+    },
+    {
+      "name": "benjyfishy",
+      "team": "Team Heretics",
+      "agent": "deadlock"
+    },
+    {
+      "name": "RieNs",
+      "team": "Team Heretics",
+      "agent": "fade"
+    },
+    {
+      "name": "Wo0t",
+      "team": "Team Heretics",
+      "agent": "chamber"
+    },
+    {
+      "name": "Boo",
+      "team": "Team Heretics",
+      "agent": "omen"
+    },
+    {
+      "name": "MiniBoo",
+      "team": "Team Heretics",
+      "agent": "raze"
+    }
+  ],
+  "map": "Lotus",
+  "map_number": 3,
+  "vod_url": "https://youtu.be/ve1Rn7gEEaQ?t=121",
+  "match_url": "https://www.vlr.gg/542277/paper-rex-vs-team-heretics-valorant-champions-2025-lr2?game=all&tab=overview"
+}

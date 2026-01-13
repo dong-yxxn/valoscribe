@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Paper Rex",
+      "starting_side": "attack"
+    },
+    {
+      "name": "GIANTX",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "something",
+      "team": "Paper Rex",
+      "agent": "yoru"
+    },
+    {
+      "name": "d4v41",
+      "team": "Paper Rex",
+      "agent": "vyse"
+    },
+    {
+      "name": "Jinggg",
+      "team": "Paper Rex",
+      "agent": "raze"
+    },
+    {
+      "name": "PatMen",
+      "team": "Paper Rex",
+      "agent": "fade"
+    },
+    {
+      "name": "f0rsakeN",
+      "team": "Paper Rex",
+      "agent": "omen"
+    },
+    {
+      "name": "westside",
+      "team": "GIANTX",
+      "agent": "cypher"
+    },
+    {
+      "name": "Cloud",
+      "team": "GIANTX",
+      "agent": "fade"
+    },
+    {
+      "name": "Flickless",
+      "team": "GIANTX",
+      "agent": "viper"
+    },
+    {
+      "name": "grubinho",
+      "team": "GIANTX",
+      "agent": "omen"
+    },
+    {
+      "name": "ara",
+      "team": "GIANTX",
+      "agent": "raze"
+    }
+  ],
+  "map": "Lotus",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/YyGHiAWnJe0?t=61",
+  "match_url": "https://www.vlr.gg/542197/paper-rex-vs-giantx-valorant-champions-2025-winners-a?game=all&tab=overview"
+}

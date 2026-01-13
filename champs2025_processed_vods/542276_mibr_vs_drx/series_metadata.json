@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542276/mibr-vs-drx-valorant-champions-2025-lr2?game=all&tab=overview",
+  "teams": [
+    "MIBR",
+    "DRX"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/PtF_6yWbjaE?t=58",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "neon"
+            },
+            {
+              "name": "cortezia",
+              "agent": "cypher"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            },
+            {
+              "name": "artzin",
+              "agent": "viper"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "free1ng",
+              "agent": "cypher"
+            },
+            {
+              "name": "Flashback",
+              "agent": "neon"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/XBMbOuoBlTc?t=60",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "jett"
+            },
+            {
+              "name": "cortezia",
+              "agent": "vyse"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            },
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/iJ8ptdMpY5M?t=120",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "raze"
+            },
+            {
+              "name": "cortezia",
+              "agent": "viper"
+            },
+            {
+              "name": "xenom",
+              "agent": "brimstone"
+            },
+            {
+              "name": "Verno",
+              "agent": "fade"
+            },
+            {
+              "name": "artzin",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "MaKo",
+              "agent": "brimstone"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "viper"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

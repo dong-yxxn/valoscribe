@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542266/team-heretics-vs-mibr-valorant-champions-2025-ubqf?game=all&tab=overview",
+  "teams": [
+    "Team Heretics",
+    "MIBR"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/wAM0seS9Gec?t=139",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "RieNs",
+              "agent": "fade"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "viper"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "yoru"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "vyse"
+            },
+            {
+              "name": "Boo",
+              "agent": "astra"
+            }
+          ]
+        },
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            },
+            {
+              "name": "aspas",
+              "agent": "waylay"
+            },
+            {
+              "name": "cortezia",
+              "agent": "viper"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/P8xvpqrJ7uM?t=126",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "RieNs",
+              "agent": "sova"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "vyse"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "viper"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "MIBR",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "neon"
+            },
+            {
+              "name": "cortezia",
+              "agent": "cypher"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "artzin",
+              "agent": "viper"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Haven",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "MIBR",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

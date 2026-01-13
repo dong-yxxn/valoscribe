@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "FNATIC",
+      "starting_side": "defense"
+    },
+    {
+      "name": "DRX",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "Alfajer",
+      "team": "FNATIC",
+      "agent": "killjoy"
+    },
+    {
+      "name": "kaajak",
+      "team": "FNATIC",
+      "agent": "yoru"
+    },
+    {
+      "name": "crashies",
+      "team": "FNATIC",
+      "agent": "sova"
+    },
+    {
+      "name": "Chronicle",
+      "team": "FNATIC",
+      "agent": "viper"
+    },
+    {
+      "name": "Boaster",
+      "team": "FNATIC",
+      "agent": "omen"
+    },
+    {
+      "name": "BeYN",
+      "team": "DRX",
+      "agent": "sova"
+    },
+    {
+      "name": "Flashback",
+      "team": "DRX",
+      "agent": "neon"
+    },
+    {
+      "name": "MaKo",
+      "team": "DRX",
+      "agent": "omen"
+    },
+    {
+      "name": "HYUNMIN",
+      "team": "DRX",
+      "agent": "waylay"
+    },
+    {
+      "name": "free1ng",
+      "team": "DRX",
+      "agent": "cypher"
+    }
+  ],
+  "map": "Haven",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/95ilWl2CEVc?t=151",
+  "match_url": "https://www.vlr.gg/542264/fnatic-vs-drx-valorant-champions-2025-ubqf?game=all&tab=overview"
+}

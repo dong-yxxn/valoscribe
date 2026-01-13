@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "FNATIC",
+      "starting_side": "attack"
+    },
+    {
+      "name": "NRG",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "kaajak",
+      "team": "FNATIC",
+      "agent": "yoru"
+    },
+    {
+      "name": "Chronicle",
+      "team": "FNATIC",
+      "agent": "vyse"
+    },
+    {
+      "name": "crashies",
+      "team": "FNATIC",
+      "agent": "sova"
+    },
+    {
+      "name": "Boaster",
+      "team": "FNATIC",
+      "agent": "omen"
+    },
+    {
+      "name": "Alfajer",
+      "team": "FNATIC",
+      "agent": "sage"
+    },
+    {
+      "name": "skuba",
+      "team": "NRG",
+      "agent": "vyse"
+    },
+    {
+      "name": "brawk",
+      "team": "NRG",
+      "agent": "sova"
+    },
+    {
+      "name": "s0m",
+      "team": "NRG",
+      "agent": "omen"
+    },
+    {
+      "name": "Ethan",
+      "team": "NRG",
+      "agent": "kayo"
+    },
+    {
+      "name": "mada",
+      "team": "NRG",
+      "agent": "jett"
+    }
+  ],
+  "map": "Ascent",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/FOatagUO-Z0?t=168",
+  "match_url": "https://www.vlr.gg/542270/fnatic-vs-nrg-valorant-champions-2025-ubf?game=all&tab=overview"
+}

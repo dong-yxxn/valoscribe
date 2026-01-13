@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542213/team-heretics-vs-t1-valorant-champions-2025-winners-d?game=all&tab=overview",
+  "teams": [
+    "Team Heretics",
+    "T1"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/_pyyIgNa758?t=69",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "RieNs",
+              "agent": "fade"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "chamber"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "raze"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "deadlock"
+            }
+          ]
+        },
+        {
+          "name": "T1",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "iZu",
+              "agent": "yoru"
+            },
+            {
+              "name": "Meteor",
+              "agent": "vyse"
+            },
+            {
+              "name": "DH",
+              "agent": "omen"
+            },
+            {
+              "name": "BuZz",
+              "agent": "neon"
+            },
+            {
+              "name": "stax",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/AFd-RN9EsVs?t=102",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "RieNs",
+              "agent": "sova"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "raze"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "yoru"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "cypher"
+            }
+          ]
+        },
+        {
+          "name": "T1",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Meteor",
+              "agent": "cypher"
+            },
+            {
+              "name": "iZu",
+              "agent": "yoru"
+            },
+            {
+              "name": "DH",
+              "agent": "omen"
+            },
+            {
+              "name": "stax",
+              "agent": "sova"
+            },
+            {
+              "name": "BuZz",
+              "agent": "neon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Ascent",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "T1",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

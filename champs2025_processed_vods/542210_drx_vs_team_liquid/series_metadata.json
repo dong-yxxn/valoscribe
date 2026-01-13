@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542210/drx-vs-team-liquid-valorant-champions-2025-decider-c?game=all&tab=overview",
+  "teams": [
+    "DRX",
+    "Team Liquid"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/z66eq8cVWkY?t=137",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "keiko",
+              "agent": "omen"
+            },
+            {
+              "name": "kamo",
+              "agent": "neon"
+            },
+            {
+              "name": "trexx",
+              "agent": "vyse"
+            },
+            {
+              "name": "nAts",
+              "agent": "waylay"
+            },
+            {
+              "name": "paTiTek",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/RG7BvnCm5_U?t=128",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "free1ng",
+              "agent": "cypher"
+            },
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            }
+          ]
+        },
+        {
+          "name": "Team Liquid",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "keiko",
+              "agent": "omen"
+            },
+            {
+              "name": "kamo",
+              "agent": "jett"
+            },
+            {
+              "name": "trexx",
+              "agent": "sova"
+            },
+            {
+              "name": "nAts",
+              "agent": "cypher"
+            },
+            {
+              "name": "paTiTek",
+              "agent": "kayo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Bind",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "Team Liquid",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

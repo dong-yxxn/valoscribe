@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542267/nrg-vs-giantx-valorant-champions-2025-ubqf?game=all&tab=overview",
+  "teams": [
+    "NRG",
+    "GIANTX"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/7Il2nPL_dOI?t=98",
+      "teams": [
+        {
+          "name": "NRG",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "brawk",
+              "agent": "sova"
+            },
+            {
+              "name": "mada",
+              "agent": "neon"
+            },
+            {
+              "name": "s0m",
+              "agent": "viper"
+            },
+            {
+              "name": "skuba",
+              "agent": "killjoy"
+            },
+            {
+              "name": "Ethan",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Cloud",
+              "agent": "sova"
+            },
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            },
+            {
+              "name": "Flickless",
+              "agent": "breach"
+            },
+            {
+              "name": "ara",
+              "agent": "neon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/oO0OLiTSGLI?t=78",
+      "teams": [
+        {
+          "name": "NRG",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "skuba",
+              "agent": "viper"
+            },
+            {
+              "name": "mada",
+              "agent": "raze"
+            },
+            {
+              "name": "s0m",
+              "agent": "omen"
+            },
+            {
+              "name": "brawk",
+              "agent": "vyse"
+            },
+            {
+              "name": "Ethan",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Cloud",
+              "agent": "fade"
+            },
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            },
+            {
+              "name": "Flickless",
+              "agent": "viper"
+            },
+            {
+              "name": "ara",
+              "agent": "raze"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Abyss",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "NRG",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

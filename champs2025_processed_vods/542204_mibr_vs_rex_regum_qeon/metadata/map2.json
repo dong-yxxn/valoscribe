@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "MIBR",
+      "starting_side": "defense"
+    },
+    {
+      "name": "Rex Regum Qeon",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "xenom",
+      "team": "MIBR",
+      "agent": "astra"
+    },
+    {
+      "name": "aspas",
+      "team": "MIBR",
+      "agent": "jett"
+    },
+    {
+      "name": "Verno",
+      "team": "MIBR",
+      "agent": "sova"
+    },
+    {
+      "name": "cortezia",
+      "team": "MIBR",
+      "agent": "cypher"
+    },
+    {
+      "name": "artzin",
+      "team": "MIBR",
+      "agent": "kayo"
+    },
+    {
+      "name": "Jemkin",
+      "team": "Rex Regum Qeon",
+      "agent": "jett"
+    },
+    {
+      "name": "xffero",
+      "team": "Rex Regum Qeon",
+      "agent": "cypher"
+    },
+    {
+      "name": "Monyet",
+      "team": "Rex Regum Qeon",
+      "agent": "omen"
+    },
+    {
+      "name": "crazyguy",
+      "team": "Rex Regum Qeon",
+      "agent": "sova"
+    },
+    {
+      "name": "Kushy",
+      "team": "Rex Regum Qeon",
+      "agent": "kayo"
+    }
+  ],
+  "map": "Abyss",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/hZD7kaU38ZE?t=70",
+  "match_url": "https://www.vlr.gg/542204/mibr-vs-rex-regum-qeon-valorant-champions-2025-decider-b?game=all&tab=overview"
+}

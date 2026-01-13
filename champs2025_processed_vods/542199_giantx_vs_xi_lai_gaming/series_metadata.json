@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542199/giantx-vs-xi-lai-gaming-valorant-champions-2025-decider-a?game=all&tab=overview",
+  "teams": [
+    "GIANTX",
+    "Xi Lai Gaming"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/1y226p8ddcw?t=77",
+      "teams": [
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "ara",
+              "agent": "raze"
+            },
+            {
+              "name": "westside",
+              "agent": "deadlock"
+            },
+            {
+              "name": "Cloud",
+              "agent": "gekko"
+            },
+            {
+              "name": "Flickless",
+              "agent": "viper"
+            },
+            {
+              "name": "grubinho",
+              "agent": "astra"
+            }
+          ]
+        },
+        {
+          "name": "Xi Lai Gaming",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Viva",
+              "agent": "brimstone"
+            },
+            {
+              "name": "NoMan",
+              "agent": "skye"
+            },
+            {
+              "name": "Rarga",
+              "agent": "waylay"
+            },
+            {
+              "name": "happywei",
+              "agent": "viper"
+            },
+            {
+              "name": "coconut",
+              "agent": "gekko"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/EEFj1K5CAgo?t=74",
+      "teams": [
+        {
+          "name": "GIANTX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "ara",
+              "agent": "jett"
+            },
+            {
+              "name": "Flickless",
+              "agent": "kayo"
+            },
+            {
+              "name": "Cloud",
+              "agent": "sova"
+            },
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "Xi Lai Gaming",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "NoMan",
+              "agent": "kayo"
+            },
+            {
+              "name": "Viva",
+              "agent": "sova"
+            },
+            {
+              "name": "Rarga",
+              "agent": "jett"
+            },
+            {
+              "name": "happywei",
+              "agent": "cypher"
+            },
+            {
+              "name": "coconut",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Lotus",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "GIANTX",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "Xi Lai Gaming",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

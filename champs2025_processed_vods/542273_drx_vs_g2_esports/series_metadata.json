@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542273/drx-vs-g2-esports-valorant-champions-2025-lr1?game=all&tab=overview",
+  "teams": [
+    "DRX",
+    "G2 Esports"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/4eVFSJyaqK8?t=93",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "valyn",
+              "agent": "omen"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            },
+            {
+              "name": "leaf",
+              "agent": "viper"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/1za76Y8jKZ0?t=81",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "free1ng",
+              "agent": "cypher"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "leaf",
+              "agent": "chamber"
+            },
+            {
+              "name": "JonahP",
+              "agent": "sova"
+            },
+            {
+              "name": "valyn",
+              "agent": "astra"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/XOAoMCPl4Iw?t=122",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "MaKo",
+              "agent": "brimstone"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "viper"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "valyn",
+              "agent": "brimstone"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "leaf",
+              "agent": "deadlock"
+            },
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

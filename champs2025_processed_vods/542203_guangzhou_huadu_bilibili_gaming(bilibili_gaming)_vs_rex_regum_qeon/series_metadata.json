@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542203/bilibili-gaming-vs-rex-regum-qeon-valorant-champions-2025-elim-b?game=all&tab=overview",
+  "teams": [
+    "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+    "Rex Regum Qeon"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/gFMaLciucxk?t=95",
+      "teams": [
+        {
+          "name": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Knight",
+              "agent": "sova"
+            },
+            {
+              "name": "Levius",
+              "agent": "cypher"
+            },
+            {
+              "name": "nephh",
+              "agent": "breach"
+            },
+            {
+              "name": "rushia",
+              "agent": "omen"
+            },
+            {
+              "name": "whzy",
+              "agent": "neon"
+            }
+          ]
+        },
+        {
+          "name": "Rex Regum Qeon",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Monyet",
+              "agent": "omen"
+            },
+            {
+              "name": "Jemkin",
+              "agent": "waylay"
+            },
+            {
+              "name": "xffero",
+              "agent": "cypher"
+            },
+            {
+              "name": "crazyguy",
+              "agent": "breach"
+            },
+            {
+              "name": "Kushy",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/M24tR740OV8?t=63",
+      "teams": [
+        {
+          "name": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "nephh",
+              "agent": "omen"
+            },
+            {
+              "name": "Knight",
+              "agent": "fade"
+            },
+            {
+              "name": "whzy",
+              "agent": "raze"
+            },
+            {
+              "name": "Levius",
+              "agent": "vyse"
+            },
+            {
+              "name": "rushia",
+              "agent": "viper"
+            }
+          ]
+        },
+        {
+          "name": "Rex Regum Qeon",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Monyet",
+              "agent": "raze"
+            },
+            {
+              "name": "crazyguy",
+              "agent": "omen"
+            },
+            {
+              "name": "xffero",
+              "agent": "viper"
+            },
+            {
+              "name": "Kushy",
+              "agent": "fade"
+            },
+            {
+              "name": "Jemkin",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/pSyJ0dU6_eU?t=205",
+      "teams": [
+        {
+          "name": "Guangzhou Huadu Bilibili Gaming(Bilibili Gaming)",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "nephh",
+              "agent": "omen"
+            },
+            {
+              "name": "Levius",
+              "agent": "vyse"
+            },
+            {
+              "name": "Knight",
+              "agent": "sova"
+            },
+            {
+              "name": "rushia",
+              "agent": "harbor"
+            },
+            {
+              "name": "whzy",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "Rex Regum Qeon",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Jemkin",
+              "agent": "jett"
+            },
+            {
+              "name": "xffero",
+              "agent": "cypher"
+            },
+            {
+              "name": "Monyet",
+              "agent": "omen"
+            },
+            {
+              "name": "Kushy",
+              "agent": "kayo"
+            },
+            {
+              "name": "crazyguy",
+              "agent": "sova"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

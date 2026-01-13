@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "G2 Esports",
+      "starting_side": "defense"
+    },
+    {
+      "name": "Dragon Ranger Gaming",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "jawgemo",
+      "team": "G2 Esports",
+      "agent": "yoru"
+    },
+    {
+      "name": "trent",
+      "team": "G2 Esports",
+      "agent": "tejo"
+    },
+    {
+      "name": "JonahP",
+      "team": "G2 Esports",
+      "agent": "sova"
+    },
+    {
+      "name": "leaf",
+      "team": "G2 Esports",
+      "agent": "deadlock"
+    },
+    {
+      "name": "valyn",
+      "team": "G2 Esports",
+      "agent": "astra"
+    },
+    {
+      "name": "Demon1",
+      "team": "Dragon Ranger Gaming",
+      "agent": "cypher"
+    },
+    {
+      "name": "Flex1n",
+      "team": "Dragon Ranger Gaming",
+      "agent": "omen"
+    },
+    {
+      "name": "SpiritZ1",
+      "team": "Dragon Ranger Gaming",
+      "agent": "yoru"
+    },
+    {
+      "name": "Akeman",
+      "team": "Dragon Ranger Gaming",
+      "agent": "waylay"
+    },
+    {
+      "name": "Nicc",
+      "team": "Dragon Ranger Gaming",
+      "agent": "sova"
+    }
+  ],
+  "map": "Abyss",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/Wo1vt5O4n4s?t=64",
+  "match_url": "https://www.vlr.gg/542214/g2-esports-vs-dragon-ranger-gaming-valorant-champions-2025-elim-d?game=all&tab=overview"
+}

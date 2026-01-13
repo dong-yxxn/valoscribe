@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542265/paper-rex-vs-g2-esports-valorant-champions-2025-ubqf?game=all&tab=overview",
+  "teams": [
+    "Paper Rex",
+    "G2 Esports"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/P9CvThezLw8?t=86",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "leaf",
+              "agent": "viper"
+            },
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "valyn",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/wIlTPrTANio?t=82",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            },
+            {
+              "name": "leaf",
+              "agent": "viper"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "valyn",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/etjzyzCXyv0?t=89",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "sage"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "PatMen",
+              "agent": "sova"
+            }
+          ]
+        },
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "leaf",
+              "agent": "chamber"
+            },
+            {
+              "name": "trent",
+              "agent": "sova"
+            },
+            {
+              "name": "valyn",
+              "agent": "omen"
+            },
+            {
+              "name": "JonahP",
+              "agent": "vyse"
+            },
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

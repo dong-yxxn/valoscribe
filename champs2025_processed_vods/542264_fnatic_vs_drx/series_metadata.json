@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542264/fnatic-vs-drx-valorant-champions-2025-ubqf?game=all&tab=overview",
+  "teams": [
+    "FNATIC",
+    "DRX"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/95ilWl2CEVc?t=151",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Alfajer",
+              "agent": "killjoy"
+            },
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "Flashback",
+              "agent": "neon"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "cypher"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/cKxzDRmLAuc?t=122",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Chronicle",
+              "agent": "vyse"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "sage"
+            },
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/Wa3bsMMXsFw?t=139",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Alfajer",
+              "agent": "killjoy"
+            },
+            {
+              "name": "kaajak",
+              "agent": "raze"
+            },
+            {
+              "name": "crashies",
+              "agent": "fade"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

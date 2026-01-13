@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542197/paper-rex-vs-giantx-valorant-champions-2025-winners-a?game=all&tab=overview",
+  "teams": [
+    "Paper Rex",
+    "GIANTX"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/ly1woPj-9cc?t=67",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "sage"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "PatMen",
+              "agent": "sova"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "ara",
+              "agent": "jett"
+            },
+            {
+              "name": "Cloud",
+              "agent": "sova"
+            },
+            {
+              "name": "Flickless",
+              "agent": "kayo"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/YyGHiAWnJe0?t=61",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "Cloud",
+              "agent": "fade"
+            },
+            {
+              "name": "Flickless",
+              "agent": "viper"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            },
+            {
+              "name": "ara",
+              "agent": "raze"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/Fs2JVd6hsUo?t=48",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "something",
+              "agent": "sova"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "d4v41",
+              "agent": "sage"
+            },
+            {
+              "name": "PatMen",
+              "agent": "viper"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            },
+            {
+              "name": "Flickless",
+              "agent": "breach"
+            },
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "ara",
+              "agent": "neon"
+            },
+            {
+              "name": "Cloud",
+              "agent": "sova"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

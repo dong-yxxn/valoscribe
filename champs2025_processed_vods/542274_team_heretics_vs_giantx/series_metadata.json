@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542274/team-heretics-vs-giantx-valorant-champions-2025-lr1?game=all&tab=overview",
+  "teams": [
+    "Team Heretics",
+    "GIANTX"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/ub6BQsmZh7I?t=80",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "RieNs",
+              "agent": "sova"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "yoru"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "jett"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "cypher"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Flickless",
+              "agent": "kayo"
+            },
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "Cloud",
+              "agent": "sova"
+            },
+            {
+              "name": "ara",
+              "agent": "jett"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/lasyR4tr0FQ?t=132",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Wo0t",
+              "agent": "chamber"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "raze"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "deadlock"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            },
+            {
+              "name": "RieNs",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Flickless",
+              "agent": "viper"
+            },
+            {
+              "name": "ara",
+              "agent": "raze"
+            },
+            {
+              "name": "westside",
+              "agent": "cypher"
+            },
+            {
+              "name": "Cloud",
+              "agent": "fade"
+            },
+            {
+              "name": "grubinho",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/nT08oCr5DgQ?t=85",
+      "teams": [
+        {
+          "name": "Team Heretics",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "MiniBoo",
+              "agent": "waylay"
+            },
+            {
+              "name": "Boo",
+              "agent": "brimstone"
+            },
+            {
+              "name": "RieNs",
+              "agent": "fade"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "viper"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "GIANTX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Cloud",
+              "agent": "gekko"
+            },
+            {
+              "name": "westside",
+              "agent": "deadlock"
+            },
+            {
+              "name": "Flickless",
+              "agent": "viper"
+            },
+            {
+              "name": "grubinho",
+              "agent": "astra"
+            },
+            {
+              "name": "ara",
+              "agent": "raze"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "T1",
+      "starting_side": "defense"
+    },
+    {
+      "name": "G2 Esports",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "stax",
+      "team": "T1",
+      "agent": "fade"
+    },
+    {
+      "name": "DH",
+      "team": "T1",
+      "agent": "omen"
+    },
+    {
+      "name": "iZu",
+      "team": "T1",
+      "agent": "waylay"
+    },
+    {
+      "name": "Meteor",
+      "team": "T1",
+      "agent": "vyse"
+    },
+    {
+      "name": "BuZz",
+      "team": "T1",
+      "agent": "neon"
+    },
+    {
+      "name": "trent",
+      "team": "G2 Esports",
+      "agent": "tejo"
+    },
+    {
+      "name": "jawgemo",
+      "team": "G2 Esports",
+      "agent": "yoru"
+    },
+    {
+      "name": "leaf",
+      "team": "G2 Esports",
+      "agent": "viper"
+    },
+    {
+      "name": "valyn",
+      "team": "G2 Esports",
+      "agent": "omen"
+    },
+    {
+      "name": "JonahP",
+      "team": "G2 Esports",
+      "agent": "fade"
+    }
+  ],
+  "map": "Corrode",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/DLqfH6RzdwU?t=56",
+  "match_url": "https://www.vlr.gg/542215/t1-vs-g2-esports-valorant-champions-2025-decider-d?game=all&tab=overview"
+}

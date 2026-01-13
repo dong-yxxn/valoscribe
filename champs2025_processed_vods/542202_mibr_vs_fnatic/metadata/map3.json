@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "MIBR",
+      "starting_side": "attack"
+    },
+    {
+      "name": "FNATIC",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "xenom",
+      "team": "MIBR",
+      "agent": "omen"
+    },
+    {
+      "name": "artzin",
+      "team": "MIBR",
+      "agent": "viper"
+    },
+    {
+      "name": "aspas",
+      "team": "MIBR",
+      "agent": "neon"
+    },
+    {
+      "name": "cortezia",
+      "team": "MIBR",
+      "agent": "killjoy"
+    },
+    {
+      "name": "Verno",
+      "team": "MIBR",
+      "agent": "sova"
+    },
+    {
+      "name": "kaajak",
+      "team": "FNATIC",
+      "agent": "yoru"
+    },
+    {
+      "name": "Chronicle",
+      "team": "FNATIC",
+      "agent": "viper"
+    },
+    {
+      "name": "crashies",
+      "team": "FNATIC",
+      "agent": "sova"
+    },
+    {
+      "name": "Alfajer",
+      "team": "FNATIC",
+      "agent": "killjoy"
+    },
+    {
+      "name": "Boaster",
+      "team": "FNATIC",
+      "agent": "omen"
+    }
+  ],
+  "map": "Haven",
+  "map_number": 3,
+  "vod_url": "https://youtu.be/H1n7elEUJsk?t=130",
+  "match_url": "https://www.vlr.gg/542202/mibr-vs-fnatic-valorant-champions-2025-winners-b?game=all&tab=overview"
+}

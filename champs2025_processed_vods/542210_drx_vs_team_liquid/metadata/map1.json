@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "DRX",
+      "starting_side": "defense"
+    },
+    {
+      "name": "Team Liquid",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "Flashback",
+      "team": "DRX",
+      "agent": "yoru"
+    },
+    {
+      "name": "MaKo",
+      "team": "DRX",
+      "agent": "omen"
+    },
+    {
+      "name": "HYUNMIN",
+      "team": "DRX",
+      "agent": "waylay"
+    },
+    {
+      "name": "free1ng",
+      "team": "DRX",
+      "agent": "vyse"
+    },
+    {
+      "name": "BeYN",
+      "team": "DRX",
+      "agent": "fade"
+    },
+    {
+      "name": "keiko",
+      "team": "Team Liquid",
+      "agent": "omen"
+    },
+    {
+      "name": "kamo",
+      "team": "Team Liquid",
+      "agent": "neon"
+    },
+    {
+      "name": "trexx",
+      "team": "Team Liquid",
+      "agent": "vyse"
+    },
+    {
+      "name": "nAts",
+      "team": "Team Liquid",
+      "agent": "waylay"
+    },
+    {
+      "name": "paTiTek",
+      "team": "Team Liquid",
+      "agent": "fade"
+    }
+  ],
+  "map": "Corrode",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/z66eq8cVWkY?t=137",
+  "match_url": "https://www.vlr.gg/542210/drx-vs-team-liquid-valorant-champions-2025-decider-c?game=all&tab=overview"
+}

@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "DRX",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Paper Rex",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Corrode",
+  "map_number": 3,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542278/drx-vs-paper-rex-valorant-champions-2025-lr3?game=all&tab=overview"
+}

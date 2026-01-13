@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "FNATIC",
+      "starting_side": "defense"
+    },
+    {
+      "name": "Paper Rex",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "kaajak",
+      "team": "FNATIC",
+      "agent": "yoru"
+    },
+    {
+      "name": "Chronicle",
+      "team": "FNATIC",
+      "agent": "viper"
+    },
+    {
+      "name": "Boaster",
+      "team": "FNATIC",
+      "agent": "astra"
+    },
+    {
+      "name": "doma",
+      "team": "FNATIC",
+      "agent": "tejo"
+    },
+    {
+      "name": "crashies",
+      "team": "FNATIC",
+      "agent": "fade"
+    },
+    {
+      "name": "d4v41",
+      "team": "Paper Rex",
+      "agent": "viper"
+    },
+    {
+      "name": "f0rsakeN",
+      "team": "Paper Rex",
+      "agent": "brimstone"
+    },
+    {
+      "name": "Jinggg",
+      "team": "Paper Rex",
+      "agent": "raze"
+    },
+    {
+      "name": "PatMen",
+      "team": "Paper Rex",
+      "agent": "fade"
+    },
+    {
+      "name": "something",
+      "team": "Paper Rex",
+      "agent": "yoru"
+    }
+  ],
+  "map": "Bind",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/7c7yrz7d-dA?t=135",
+  "match_url": "https://www.vlr.gg/542268/fnatic-vs-paper-rex-valorant-champions-2025-ubsf?game=all&tab=overview"
+}

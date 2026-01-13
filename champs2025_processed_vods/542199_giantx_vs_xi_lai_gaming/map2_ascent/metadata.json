@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "GIANTX",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Xi Lai Gaming",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "ara",
+      "team": "GIANTX",
+      "agent": "jett"
+    },
+    {
+      "name": "Flickless",
+      "team": "GIANTX",
+      "agent": "kayo"
+    },
+    {
+      "name": "Cloud",
+      "team": "GIANTX",
+      "agent": "sova"
+    },
+    {
+      "name": "westside",
+      "team": "GIANTX",
+      "agent": "cypher"
+    },
+    {
+      "name": "grubinho",
+      "team": "GIANTX",
+      "agent": "omen"
+    },
+    {
+      "name": "NoMan",
+      "team": "Xi Lai Gaming",
+      "agent": "kayo"
+    },
+    {
+      "name": "Viva",
+      "team": "Xi Lai Gaming",
+      "agent": "sova"
+    },
+    {
+      "name": "Rarga",
+      "team": "Xi Lai Gaming",
+      "agent": "jett"
+    },
+    {
+      "name": "happywei",
+      "team": "Xi Lai Gaming",
+      "agent": "cypher"
+    },
+    {
+      "name": "coconut",
+      "team": "Xi Lai Gaming",
+      "agent": "omen"
+    }
+  ],
+  "map": "Ascent",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/EEFj1K5CAgo?t=74",
+  "match_url": "https://www.vlr.gg/542199/giantx-vs-xi-lai-gaming-valorant-champions-2025-decider-a?game=all&tab=overview"
+}

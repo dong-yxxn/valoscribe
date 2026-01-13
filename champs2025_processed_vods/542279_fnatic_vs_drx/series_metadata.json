@@ -1,0 +1,262 @@
+{
+  "match_url": "https://www.vlr.gg/542279/fnatic-vs-drx-valorant-champions-2025-lbf?game=all&tab=overview",
+  "teams": [
+    "FNATIC",
+    "DRX"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/u8035r6DVmc?t=137",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "crashies",
+              "agent": "fade"
+            },
+            {
+              "name": "kaajak",
+              "agent": "neon"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "breach"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "vyse"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "cypher"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/dWNpeWDGhXU?t=119",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "crashies",
+              "agent": "fade"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "vyse"
+            },
+            {
+              "name": "Boaster",
+              "agent": "astra"
+            },
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/ATXoP-Hxffk?t=138",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "killjoy"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            },
+            {
+              "name": "free1ng",
+              "agent": "cypher"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 4,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/Rw6cSF9d3ho?t=147",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Boaster",
+              "agent": "astra"
+            },
+            {
+              "name": "crashies",
+              "agent": "fade"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "tejo"
+            }
+          ]
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "MaKo",
+              "agent": "brimstone"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "free1ng",
+              "agent": "viper"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 5,
+      "map_name": "Ascent",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "DRX",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

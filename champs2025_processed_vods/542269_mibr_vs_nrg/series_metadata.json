@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542269/mibr-vs-nrg-valorant-champions-2025-ubsf?game=all&tab=overview",
+  "teams": [
+    "MIBR",
+    "NRG"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/1PgPR0ASXng?t=138",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "jett"
+            },
+            {
+              "name": "cortezia",
+              "agent": "cypher"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "xenom",
+              "agent": "astra"
+            },
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            }
+          ]
+        },
+        {
+          "name": "NRG",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "brawk",
+              "agent": "sova"
+            },
+            {
+              "name": "s0m",
+              "agent": "harbor"
+            },
+            {
+              "name": "skuba",
+              "agent": "vyse"
+            },
+            {
+              "name": "Ethan",
+              "agent": "omen"
+            },
+            {
+              "name": "mada",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/Ku9TwHcfJ7w?t=130",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "neon"
+            },
+            {
+              "name": "cortezia",
+              "agent": "killjoy"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "artzin",
+              "agent": "viper"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "NRG",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "brawk",
+              "agent": "sova"
+            },
+            {
+              "name": "skuba",
+              "agent": "killjoy"
+            },
+            {
+              "name": "s0m",
+              "agent": "viper"
+            },
+            {
+              "name": "Ethan",
+              "agent": "omen"
+            },
+            {
+              "name": "mada",
+              "agent": "neon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Corrode",
+      "vod_url": "https://youtu.be/83k8Uxmx2lM?t=76",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "waylay"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "xenom",
+              "agent": "omen"
+            },
+            {
+              "name": "cortezia",
+              "agent": "viper"
+            },
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            }
+          ]
+        },
+        {
+          "name": "NRG",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "s0m",
+              "agent": "omen"
+            },
+            {
+              "name": "skuba",
+              "agent": "viper"
+            },
+            {
+              "name": "Ethan",
+              "agent": "kayo"
+            },
+            {
+              "name": "brawk",
+              "agent": "sova"
+            },
+            {
+              "name": "mada",
+              "agent": "waylay"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "MIBR",
+      "starting_side": "defense"
+    },
+    {
+      "name": "NRG",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "aspas",
+      "team": "MIBR",
+      "agent": "jett"
+    },
+    {
+      "name": "cortezia",
+      "team": "MIBR",
+      "agent": "cypher"
+    },
+    {
+      "name": "Verno",
+      "team": "MIBR",
+      "agent": "sova"
+    },
+    {
+      "name": "xenom",
+      "team": "MIBR",
+      "agent": "astra"
+    },
+    {
+      "name": "artzin",
+      "team": "MIBR",
+      "agent": "kayo"
+    },
+    {
+      "name": "brawk",
+      "team": "NRG",
+      "agent": "sova"
+    },
+    {
+      "name": "s0m",
+      "team": "NRG",
+      "agent": "harbor"
+    },
+    {
+      "name": "skuba",
+      "team": "NRG",
+      "agent": "vyse"
+    },
+    {
+      "name": "Ethan",
+      "team": "NRG",
+      "agent": "omen"
+    },
+    {
+      "name": "mada",
+      "team": "NRG",
+      "agent": "yoru"
+    }
+  ],
+  "map": "Abyss",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/1PgPR0ASXng?t=138",
+  "match_url": "https://www.vlr.gg/542269/mibr-vs-nrg-valorant-champions-2025-ubsf?game=all&tab=overview"
+}

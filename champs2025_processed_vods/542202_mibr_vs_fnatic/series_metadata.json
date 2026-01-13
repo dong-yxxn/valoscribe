@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542202/mibr-vs-fnatic-valorant-champions-2025-winners-b?game=all&tab=overview",
+  "teams": [
+    "MIBR",
+    "FNATIC"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/KUhwSOSYGW4?t=140",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "raze"
+            },
+            {
+              "name": "Verno",
+              "agent": "fade"
+            },
+            {
+              "name": "artzin",
+              "agent": "yoru"
+            },
+            {
+              "name": "xenom",
+              "agent": "brimstone"
+            },
+            {
+              "name": "cortezia",
+              "agent": "viper"
+            }
+          ]
+        },
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "crashies",
+              "agent": "fade"
+            },
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "tejo"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "Boaster",
+              "agent": "astra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/XZumx3nTop8?t=122",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "aspas",
+              "agent": "jett"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            },
+            {
+              "name": "xenom",
+              "agent": "astra"
+            },
+            {
+              "name": "cortezia",
+              "agent": "cypher"
+            },
+            {
+              "name": "artzin",
+              "agent": "kayo"
+            }
+          ]
+        },
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Boaster",
+              "agent": "astra"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "cypher"
+            },
+            {
+              "name": "kaajak",
+              "agent": "waylay"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "breach"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/H1n7elEUJsk?t=130",
+      "teams": [
+        {
+          "name": "MIBR",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "xenom",
+              "agent": "omen"
+            },
+            {
+              "name": "artzin",
+              "agent": "viper"
+            },
+            {
+              "name": "aspas",
+              "agent": "neon"
+            },
+            {
+              "name": "cortezia",
+              "agent": "killjoy"
+            },
+            {
+              "name": "Verno",
+              "agent": "sova"
+            }
+          ]
+        },
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "Alfajer",
+              "agent": "killjoy"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

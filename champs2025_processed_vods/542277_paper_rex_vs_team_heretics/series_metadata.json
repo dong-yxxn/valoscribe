@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542277/paper-rex-vs-team-heretics-valorant-champions-2025-lr2?game=all&tab=overview",
+  "teams": [
+    "Paper Rex",
+    "Team Heretics"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/8tx1YWEgcvk?t=127",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "PatMen",
+              "agent": "sova"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "sage"
+            }
+          ]
+        },
+        {
+          "name": "Team Heretics",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Wo0t",
+              "agent": "jett"
+            },
+            {
+              "name": "RieNs",
+              "agent": "sova"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "cypher"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/t-vD9uHmzjI?t=109",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "f0rsakeN",
+              "agent": "brimstone"
+            },
+            {
+              "name": "d4v41",
+              "agent": "viper"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "Team Heretics",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Wo0t",
+              "agent": "yoru"
+            },
+            {
+              "name": "RieNs",
+              "agent": "fade"
+            },
+            {
+              "name": "benjyfishy",
+              "agent": "viper"
+            },
+            {
+              "name": "Boo",
+              "agent": "brimstone"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "waylay"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/ve1Rn7gEEaQ?t=121",
+      "teams": [
+        {
+          "name": "Paper Rex",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            }
+          ]
+        },
+        {
+          "name": "Team Heretics",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "benjyfishy",
+              "agent": "deadlock"
+            },
+            {
+              "name": "RieNs",
+              "agent": "fade"
+            },
+            {
+              "name": "Wo0t",
+              "agent": "chamber"
+            },
+            {
+              "name": "Boo",
+              "agent": "omen"
+            },
+            {
+              "name": "MiniBoo",
+              "agent": "raze"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

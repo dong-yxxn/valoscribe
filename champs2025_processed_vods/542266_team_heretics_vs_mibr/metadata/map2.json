@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Team Heretics",
+      "starting_side": "attack"
+    },
+    {
+      "name": "MIBR",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "RieNs",
+      "team": "Team Heretics",
+      "agent": "sova"
+    },
+    {
+      "name": "benjyfishy",
+      "team": "Team Heretics",
+      "agent": "vyse"
+    },
+    {
+      "name": "Wo0t",
+      "team": "Team Heretics",
+      "agent": "viper"
+    },
+    {
+      "name": "Boo",
+      "team": "Team Heretics",
+      "agent": "omen"
+    },
+    {
+      "name": "MiniBoo",
+      "team": "Team Heretics",
+      "agent": "yoru"
+    },
+    {
+      "name": "aspas",
+      "team": "MIBR",
+      "agent": "neon"
+    },
+    {
+      "name": "cortezia",
+      "team": "MIBR",
+      "agent": "cypher"
+    },
+    {
+      "name": "Verno",
+      "team": "MIBR",
+      "agent": "sova"
+    },
+    {
+      "name": "artzin",
+      "team": "MIBR",
+      "agent": "viper"
+    },
+    {
+      "name": "xenom",
+      "team": "MIBR",
+      "agent": "omen"
+    }
+  ],
+  "map": "Sunset",
+  "map_number": 2,
+  "vod_url": "https://youtu.be/P8xvpqrJ7uM?t=126",
+  "match_url": "https://www.vlr.gg/542266/team-heretics-vs-mibr-valorant-champions-2025-ubqf?game=all&tab=overview"
+}

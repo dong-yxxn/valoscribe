@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Team Heretics",
+      "starting_side": "attack"
+    },
+    {
+      "name": "GIANTX",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "MiniBoo",
+      "team": "Team Heretics",
+      "agent": "waylay"
+    },
+    {
+      "name": "Boo",
+      "team": "Team Heretics",
+      "agent": "brimstone"
+    },
+    {
+      "name": "RieNs",
+      "team": "Team Heretics",
+      "agent": "fade"
+    },
+    {
+      "name": "benjyfishy",
+      "team": "Team Heretics",
+      "agent": "viper"
+    },
+    {
+      "name": "Wo0t",
+      "team": "Team Heretics",
+      "agent": "yoru"
+    },
+    {
+      "name": "Cloud",
+      "team": "GIANTX",
+      "agent": "gekko"
+    },
+    {
+      "name": "westside",
+      "team": "GIANTX",
+      "agent": "deadlock"
+    },
+    {
+      "name": "Flickless",
+      "team": "GIANTX",
+      "agent": "viper"
+    },
+    {
+      "name": "grubinho",
+      "team": "GIANTX",
+      "agent": "astra"
+    },
+    {
+      "name": "ara",
+      "team": "GIANTX",
+      "agent": "raze"
+    }
+  ],
+  "map": "Bind",
+  "map_number": 3,
+  "vod_url": "https://youtu.be/nT08oCr5DgQ?t=85",
+  "match_url": "https://www.vlr.gg/542274/team-heretics-vs-giantx-valorant-champions-2025-lr1?game=all&tab=overview"
+}

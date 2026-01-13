@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542268/fnatic-vs-paper-rex-valorant-champions-2025-ubsf?game=all&tab=overview",
+  "teams": [
+    "FNATIC",
+    "Paper Rex"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/7c7yrz7d-dA?t=135",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "Boaster",
+              "agent": "astra"
+            },
+            {
+              "name": "doma",
+              "agent": "tejo"
+            },
+            {
+              "name": "crashies",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "Paper Rex",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "d4v41",
+              "agent": "viper"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "brimstone"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/UvL_0v_SL0c?t=134",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "kaajak",
+              "agent": "yoru"
+            },
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "crashies",
+              "agent": "sova"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            },
+            {
+              "name": "doma",
+              "agent": "killjoy"
+            }
+          ]
+        },
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "Jinggg",
+              "agent": "omen"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "waylay"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/zcr-gzZTfe0?t=130",
+      "teams": [
+        {
+          "name": "FNATIC",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Chronicle",
+              "agent": "viper"
+            },
+            {
+              "name": "Boaster",
+              "agent": "omen"
+            },
+            {
+              "name": "kaajak",
+              "agent": "raze"
+            },
+            {
+              "name": "doma",
+              "agent": "killjoy"
+            },
+            {
+              "name": "crashies",
+              "agent": "fade"
+            }
+          ]
+        },
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

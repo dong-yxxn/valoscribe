@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "DRX",
+      "starting_side": "attack"
+    },
+    {
+      "name": "NRG",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "Flashback",
+      "team": "DRX",
+      "agent": "neon"
+    },
+    {
+      "name": "BeYN",
+      "team": "DRX",
+      "agent": "sova"
+    },
+    {
+      "name": "HYUNMIN",
+      "team": "DRX",
+      "agent": "waylay"
+    },
+    {
+      "name": "free1ng",
+      "team": "DRX",
+      "agent": "cypher"
+    },
+    {
+      "name": "MaKo",
+      "team": "DRX",
+      "agent": "omen"
+    },
+    {
+      "name": "brawk",
+      "team": "NRG",
+      "agent": "sova"
+    },
+    {
+      "name": "mada",
+      "team": "NRG",
+      "agent": "neon"
+    },
+    {
+      "name": "skuba",
+      "team": "NRG",
+      "agent": "killjoy"
+    },
+    {
+      "name": "s0m",
+      "team": "NRG",
+      "agent": "viper"
+    },
+    {
+      "name": "Ethan",
+      "team": "NRG",
+      "agent": "omen"
+    }
+  ],
+  "map": "Haven",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/nGZij3ejZsY?t=67",
+  "match_url": "https://www.vlr.gg/542208/drx-vs-nrg-valorant-champions-2025-winners-c?game=all&tab=overview"
+}

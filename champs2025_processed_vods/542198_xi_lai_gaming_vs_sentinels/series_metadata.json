@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542198/xi-lai-gaming-vs-sentinels-valorant-champions-2025-elim-a?game=all&tab=overview",
+  "teams": [
+    "Xi Lai Gaming",
+    "Sentinels"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/5eZj_EMbgFQ?t=88",
+      "teams": [
+        {
+          "name": "Xi Lai Gaming",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "happywei",
+              "agent": "omen"
+            },
+            {
+              "name": "NoMan",
+              "agent": "jett"
+            },
+            {
+              "name": "Rarga",
+              "agent": "yoru"
+            },
+            {
+              "name": "Viva",
+              "agent": "sova"
+            },
+            {
+              "name": "coconut",
+              "agent": "astra"
+            }
+          ]
+        },
+        {
+          "name": "Sentinels",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "johnqt",
+              "agent": "sova"
+            },
+            {
+              "name": "zekken",
+              "agent": "jett"
+            },
+            {
+              "name": "N4RRATE",
+              "agent": "omen"
+            },
+            {
+              "name": "Zellsis",
+              "agent": "kayo"
+            },
+            {
+              "name": "bang",
+              "agent": "astra"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/htwwIR59xuM?t=62",
+      "teams": [
+        {
+          "name": "Xi Lai Gaming",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "happywei",
+              "agent": "cypher"
+            },
+            {
+              "name": "Rarga",
+              "agent": "sage"
+            },
+            {
+              "name": "Viva",
+              "agent": "fade"
+            },
+            {
+              "name": "coconut",
+              "agent": "omen"
+            },
+            {
+              "name": "NoMan",
+              "agent": "deadlock"
+            }
+          ]
+        },
+        {
+          "name": "Sentinels",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "zekken",
+              "agent": "raze"
+            },
+            {
+              "name": "johnqt",
+              "agent": "viper"
+            },
+            {
+              "name": "bang",
+              "agent": "omen"
+            },
+            {
+              "name": "Zellsis",
+              "agent": "vyse"
+            },
+            {
+              "name": "N4RRATE",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Haven",
+      "vod_url": "https://youtu.be/3E4sgQFsgAU?t=102",
+      "teams": [
+        {
+          "name": "Xi Lai Gaming",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "happywei",
+              "agent": "viper"
+            },
+            {
+              "name": "NoMan",
+              "agent": "killjoy"
+            },
+            {
+              "name": "Rarga",
+              "agent": "neon"
+            },
+            {
+              "name": "coconut",
+              "agent": "omen"
+            },
+            {
+              "name": "Viva",
+              "agent": "sova"
+            }
+          ]
+        },
+        {
+          "name": "Sentinels",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "johnqt",
+              "agent": "viper"
+            },
+            {
+              "name": "bang",
+              "agent": "omen"
+            },
+            {
+              "name": "zekken",
+              "agent": "neon"
+            },
+            {
+              "name": "Zellsis",
+              "agent": "killjoy"
+            },
+            {
+              "name": "N4RRATE",
+              "agent": "sova"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

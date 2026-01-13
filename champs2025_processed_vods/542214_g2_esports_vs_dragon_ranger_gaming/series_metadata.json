@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542214/g2-esports-vs-dragon-ranger-gaming-valorant-champions-2025-elim-d?game=all&tab=overview",
+  "teams": [
+    "G2 Esports",
+    "Dragon Ranger Gaming"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/EoRsExI-YMU?t=91",
+      "teams": [
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "leaf",
+              "agent": "viper"
+            },
+            {
+              "name": "JonahP",
+              "agent": "fade"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "valyn",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "Dragon Ranger Gaming",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Demon1",
+              "agent": "vyse"
+            },
+            {
+              "name": "Flex1n",
+              "agent": "omen"
+            },
+            {
+              "name": "Akeman",
+              "agent": "waylay"
+            },
+            {
+              "name": "SpiritZ1",
+              "agent": "yoru"
+            },
+            {
+              "name": "Nicc",
+              "agent": "breach"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/Wo1vt5O4n4s?t=64",
+      "teams": [
+        {
+          "name": "G2 Esports",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "jawgemo",
+              "agent": "yoru"
+            },
+            {
+              "name": "trent",
+              "agent": "tejo"
+            },
+            {
+              "name": "JonahP",
+              "agent": "sova"
+            },
+            {
+              "name": "leaf",
+              "agent": "deadlock"
+            },
+            {
+              "name": "valyn",
+              "agent": "astra"
+            }
+          ]
+        },
+        {
+          "name": "Dragon Ranger Gaming",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "Demon1",
+              "agent": "cypher"
+            },
+            {
+              "name": "Flex1n",
+              "agent": "omen"
+            },
+            {
+              "name": "SpiritZ1",
+              "agent": "yoru"
+            },
+            {
+              "name": "Akeman",
+              "agent": "waylay"
+            },
+            {
+              "name": "Nicc",
+              "agent": "sova"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Ascent",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "G2 Esports",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "Dragon Ranger Gaming",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

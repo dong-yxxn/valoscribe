@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "Team Heretics",
+      "starting_side": "attack"
+    },
+    {
+      "name": "T1",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Ascent",
+  "map_number": 3,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542213/team-heretics-vs-t1-valorant-champions-2025-winners-d?game=all&tab=overview"
+}

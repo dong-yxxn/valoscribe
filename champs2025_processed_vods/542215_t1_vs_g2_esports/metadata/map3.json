@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "T1",
+      "starting_side": "attack"
+    },
+    {
+      "name": "G2 Esports",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Sunset",
+  "map_number": 3,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542215/t1-vs-g2-esports-valorant-champions-2025-decider-d?game=all&tab=overview"
+}

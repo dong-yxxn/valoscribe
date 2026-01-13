@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "FNATIC",
+      "starting_side": "attack"
+    },
+    {
+      "name": "NRG",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Lotus",
+  "map_number": 3,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542270/fnatic-vs-nrg-valorant-champions-2025-ubf?game=all&tab=overview"
+}

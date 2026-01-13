@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "Xi Lai Gaming",
+      "starting_side": "attack"
+    },
+    {
+      "name": "Sentinels",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "happywei",
+      "team": "Xi Lai Gaming",
+      "agent": "viper"
+    },
+    {
+      "name": "NoMan",
+      "team": "Xi Lai Gaming",
+      "agent": "killjoy"
+    },
+    {
+      "name": "Rarga",
+      "team": "Xi Lai Gaming",
+      "agent": "neon"
+    },
+    {
+      "name": "coconut",
+      "team": "Xi Lai Gaming",
+      "agent": "omen"
+    },
+    {
+      "name": "Viva",
+      "team": "Xi Lai Gaming",
+      "agent": "sova"
+    },
+    {
+      "name": "johnqt",
+      "team": "Sentinels",
+      "agent": "viper"
+    },
+    {
+      "name": "bang",
+      "team": "Sentinels",
+      "agent": "omen"
+    },
+    {
+      "name": "zekken",
+      "team": "Sentinels",
+      "agent": "neon"
+    },
+    {
+      "name": "Zellsis",
+      "team": "Sentinels",
+      "agent": "killjoy"
+    },
+    {
+      "name": "N4RRATE",
+      "team": "Sentinels",
+      "agent": "sova"
+    }
+  ],
+  "map": "Haven",
+  "map_number": 3,
+  "vod_url": "https://youtu.be/3E4sgQFsgAU?t=102",
+  "match_url": "https://www.vlr.gg/542198/xi-lai-gaming-vs-sentinels-valorant-champions-2025-elim-a?game=all&tab=overview"
+}

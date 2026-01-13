@@ -1,0 +1,144 @@
+{
+  "match_url": "https://www.vlr.gg/542278/drx-vs-paper-rex-valorant-champions-2025-lr3?game=all&tab=overview",
+  "teams": [
+    "DRX",
+    "Paper Rex"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Ascent",
+      "vod_url": "https://youtu.be/6y34YhvftHs?t=75",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "HYUNMIN",
+              "agent": "waylay"
+            },
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "BeYN",
+              "agent": "sova"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Jinggg",
+              "agent": "sage"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "PatMen",
+              "agent": "sova"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Lotus",
+      "vod_url": "https://youtu.be/o1xSbShm1So?t=93",
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "MaKo",
+              "agent": "omen"
+            },
+            {
+              "name": "free1ng",
+              "agent": "vyse"
+            },
+            {
+              "name": "BeYN",
+              "agent": "fade"
+            },
+            {
+              "name": "HYUNMIN",
+              "agent": "raze"
+            },
+            {
+              "name": "Flashback",
+              "agent": "yoru"
+            }
+          ]
+        },
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Jinggg",
+              "agent": "raze"
+            },
+            {
+              "name": "d4v41",
+              "agent": "vyse"
+            },
+            {
+              "name": "f0rsakeN",
+              "agent": "omen"
+            },
+            {
+              "name": "something",
+              "agent": "yoru"
+            },
+            {
+              "name": "PatMen",
+              "agent": "fade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Corrode",
+      "vod_url": null,
+      "teams": [
+        {
+          "name": "DRX",
+          "starting_side": "attack",
+          "players": []
+        },
+        {
+          "name": "Paper Rex",
+          "starting_side": "defense",
+          "players": []
+        }
+      ]
+    }
+  ]
+}

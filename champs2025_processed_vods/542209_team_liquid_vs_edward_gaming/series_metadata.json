@@ -1,0 +1,186 @@
+{
+  "match_url": "https://www.vlr.gg/542209/team-liquid-vs-edward-gaming-valorant-champions-2025-elim-c?game=all&tab=overview",
+  "teams": [
+    "Team Liquid",
+    "EDward Gaming"
+  ],
+  "maps": [
+    {
+      "map_number": 1,
+      "map_name": "Sunset",
+      "vod_url": "https://youtu.be/S3RLocNSFfo?t=135",
+      "teams": [
+        {
+          "name": "Team Liquid",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "nAts",
+              "agent": "cypher"
+            },
+            {
+              "name": "kamo",
+              "agent": "yoru"
+            },
+            {
+              "name": "paTiTek",
+              "agent": "omen"
+            },
+            {
+              "name": "trexx",
+              "agent": "fade"
+            },
+            {
+              "name": "keiko",
+              "agent": "raze"
+            }
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Smoggy",
+              "agent": "omen"
+            },
+            {
+              "name": "nobody",
+              "agent": "sova"
+            },
+            {
+              "name": "ZmjjKK",
+              "agent": "neon"
+            },
+            {
+              "name": "Jieni7",
+              "agent": "breach"
+            },
+            {
+              "name": "CHICHOO",
+              "agent": "cypher"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 2,
+      "map_name": "Abyss",
+      "vod_url": "https://youtu.be/UM1Rl3Bc-mI?t=122",
+      "teams": [
+        {
+          "name": "Team Liquid",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "nAts",
+              "agent": "cypher"
+            },
+            {
+              "name": "kamo",
+              "agent": "jett"
+            },
+            {
+              "name": "paTiTek",
+              "agent": "kayo"
+            },
+            {
+              "name": "trexx",
+              "agent": "sova"
+            },
+            {
+              "name": "keiko",
+              "agent": "omen"
+            }
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Smoggy",
+              "agent": "omen"
+            },
+            {
+              "name": "Jieni7",
+              "agent": "waylay"
+            },
+            {
+              "name": "nobody",
+              "agent": "sova"
+            },
+            {
+              "name": "CHICHOO",
+              "agent": "astra"
+            },
+            {
+              "name": "ZmjjKK",
+              "agent": "yoru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "map_number": 3,
+      "map_name": "Bind",
+      "vod_url": "https://youtu.be/vCovO7MVtCM?t=127",
+      "teams": [
+        {
+          "name": "Team Liquid",
+          "starting_side": "attack",
+          "players": [
+            {
+              "name": "nAts",
+              "agent": "viper"
+            },
+            {
+              "name": "kamo",
+              "agent": "yoru"
+            },
+            {
+              "name": "paTiTek",
+              "agent": "fade"
+            },
+            {
+              "name": "trexx",
+              "agent": "brimstone"
+            },
+            {
+              "name": "keiko",
+              "agent": "raze"
+            }
+          ]
+        },
+        {
+          "name": "EDward Gaming",
+          "starting_side": "defense",
+          "players": [
+            {
+              "name": "Smoggy",
+              "agent": "brimstone"
+            },
+            {
+              "name": "nobody",
+              "agent": "fade"
+            },
+            {
+              "name": "CHICHOO",
+              "agent": "viper"
+            },
+            {
+              "name": "ZmjjKK",
+              "agent": "yoru"
+            },
+            {
+              "name": "Jieni7",
+              "agent": "tejo"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

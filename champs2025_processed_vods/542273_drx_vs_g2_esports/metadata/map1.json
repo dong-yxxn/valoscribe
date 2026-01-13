@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "DRX",
+      "starting_side": "defense"
+    },
+    {
+      "name": "G2 Esports",
+      "starting_side": "attack"
+    }
+  ],
+  "players": [
+    {
+      "name": "MaKo",
+      "team": "DRX",
+      "agent": "omen"
+    },
+    {
+      "name": "HYUNMIN",
+      "team": "DRX",
+      "agent": "waylay"
+    },
+    {
+      "name": "Flashback",
+      "team": "DRX",
+      "agent": "yoru"
+    },
+    {
+      "name": "free1ng",
+      "team": "DRX",
+      "agent": "vyse"
+    },
+    {
+      "name": "BeYN",
+      "team": "DRX",
+      "agent": "fade"
+    },
+    {
+      "name": "jawgemo",
+      "team": "G2 Esports",
+      "agent": "yoru"
+    },
+    {
+      "name": "valyn",
+      "team": "G2 Esports",
+      "agent": "omen"
+    },
+    {
+      "name": "trent",
+      "team": "G2 Esports",
+      "agent": "tejo"
+    },
+    {
+      "name": "JonahP",
+      "team": "G2 Esports",
+      "agent": "fade"
+    },
+    {
+      "name": "leaf",
+      "team": "G2 Esports",
+      "agent": "viper"
+    }
+  ],
+  "map": "Lotus",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/4eVFSJyaqK8?t=93",
+  "match_url": "https://www.vlr.gg/542273/drx-vs-g2-esports-valorant-champions-2025-lr1?game=all&tab=overview"
+}

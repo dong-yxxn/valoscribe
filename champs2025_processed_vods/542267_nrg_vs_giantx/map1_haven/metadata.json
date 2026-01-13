@@ -1,0 +1,68 @@
+{
+  "teams": [
+    {
+      "name": "NRG",
+      "starting_side": "attack"
+    },
+    {
+      "name": "GIANTX",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [
+    {
+      "name": "brawk",
+      "team": "NRG",
+      "agent": "sova"
+    },
+    {
+      "name": "mada",
+      "team": "NRG",
+      "agent": "neon"
+    },
+    {
+      "name": "s0m",
+      "team": "NRG",
+      "agent": "viper"
+    },
+    {
+      "name": "skuba",
+      "team": "NRG",
+      "agent": "killjoy"
+    },
+    {
+      "name": "Ethan",
+      "team": "NRG",
+      "agent": "omen"
+    },
+    {
+      "name": "Cloud",
+      "team": "GIANTX",
+      "agent": "sova"
+    },
+    {
+      "name": "westside",
+      "team": "GIANTX",
+      "agent": "cypher"
+    },
+    {
+      "name": "grubinho",
+      "team": "GIANTX",
+      "agent": "omen"
+    },
+    {
+      "name": "Flickless",
+      "team": "GIANTX",
+      "agent": "breach"
+    },
+    {
+      "name": "ara",
+      "team": "GIANTX",
+      "agent": "neon"
+    }
+  ],
+  "map": "Haven",
+  "map_number": 1,
+  "vod_url": "https://youtu.be/7Il2nPL_dOI?t=98",
+  "match_url": "https://www.vlr.gg/542267/nrg-vs-giantx-valorant-champions-2025-ubqf?game=all&tab=overview"
+}

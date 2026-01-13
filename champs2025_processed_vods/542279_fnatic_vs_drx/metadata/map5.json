@@ -1,0 +1,17 @@
+{
+  "teams": [
+    {
+      "name": "FNATIC",
+      "starting_side": "attack"
+    },
+    {
+      "name": "DRX",
+      "starting_side": "defense"
+    }
+  ],
+  "players": [],
+  "map": "Ascent",
+  "map_number": 5,
+  "vod_url": null,
+  "match_url": "https://www.vlr.gg/542279/fnatic-vs-drx-valorant-champions-2025-lbf?game=all&tab=overview"
+}
