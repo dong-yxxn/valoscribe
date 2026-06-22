@@ -1,10 +1,14 @@
 """Main orchestrator for processing Valorant VOD frames."""
 
 from __future__ import annotations
+import json
 from pathlib import Path
+import traceback
 from typing import Optional
 
+import cv2
 import numpy as np
+from pydantic import ValidationError
 
 from valoscribe.orchestration.phase_detector import PhaseDetector, Phase
 from valoscribe.orchestration.round_manager import RoundManager
@@ -679,9 +683,29 @@ class GameStateManager:
                             detections[ability_name] = ability_info
 
                 # Detect ultimate - returns tuple of (UltimateInfo, white_pixel_ratio)
-                ultimate_result = self.detector_registry.preround_ultimate_detector.detect_ultimate(
-                    frame, slot_idx, side
-                )
+                try:
+                    ultimate_result = self.detector_registry.preround_ultimate_detector.detect_ultimate(
+                        frame, slot_idx, side
+                    )
+                except ValidationError as exc:
+                    self._save_preround_ultimate_validation_debug(
+                        exc=exc,
+                        frame=frame,
+                        timestamp=timestamp,
+                        slot_idx=slot_idx,
+                        side=side,
+                        detected_agent=detected_agent,
+                        detected_side=detected_side,
+                        expected_side=expected_side_for_slot,
+                        slot_team_name=slot_team_name,
+                        matching_tracker=matching_tracker,
+                    )
+                    previous_ultimate = matching_tracker.current_state.get("ultimate")
+                    log.warning(
+                        f"Preround slot {slot_idx} -> Player {matching_tracker.player_index} "
+                        f"ultimate validation failed; keeping previous value: {previous_ultimate}"
+                    )
+                    ultimate_result = None
                 if ultimate_result is not None:
                     ultimate_info, _ = ultimate_result
                     detections["ultimate"] = ultimate_info
@@ -744,6 +768,134 @@ class GameStateManager:
                         f"(round {self.round_manager.current_round - 1} ended, {winner} wins, "
                         f"event timestamp: {last_event_timestamp:.2f}s)"
                     )
+
+    def _save_preround_ultimate_validation_debug(
+        self,
+        *,
+        exc: ValidationError,
+        frame: np.ndarray,
+        timestamp: float,
+        slot_idx: int,
+        side: str,
+        detected_agent: str,
+        detected_side: str,
+        expected_side: str,
+        slot_team_name: str,
+        matching_tracker: PlayerStateTracker,
+    ) -> None:
+        """Persist a debug bundle when ultimate validation fails."""
+        detector = self.detector_registry.preround_ultimate_detector
+        debug_root = self.output_dir / "debug_errors"
+        safe_time = f"{timestamp:.2f}".replace(".", "_")
+        debug_dir = debug_root / f"validation_preround_ultimate_{safe_time}_slot{slot_idx}"
+        debug_dir.mkdir(parents=True, exist_ok=True)
+
+        def fmt_time(seconds: float) -> str:
+            minutes = int(seconds // 60)
+            remainder = seconds - (minutes * 60)
+            return f"{minutes:02d}:{remainder:05.2f}"
+
+        def write_image(name: str, image: np.ndarray) -> None:
+            if image is not None and getattr(image, "size", 0) > 0:
+                cv2.imwrite(str(debug_dir / name), image)
+
+        def build_ultimate_debug(player_index: int, player_crop_data: dict) -> dict:
+            info = {
+                "slot_idx": player_index,
+                "side": player_crop_data.get("side"),
+                "has_ultimate_crop": False,
+            }
+            ultimate_crop = player_crop_data.get("ultimate")
+            if ultimate_crop is None or ultimate_crop.size == 0:
+                return info
+
+            preprocessed = detector._preprocess_crop(ultimate_crop)
+            h, w = preprocessed.shape
+            center = (w // 2, h // 2)
+            preprocessed_with_mask = preprocessed.copy()
+            cv2.circle(preprocessed_with_mask, center, detector.center_mask_radius, 0, -1)
+            ring_mask = detector._create_ring_mask(preprocessed.shape, center)
+            ring_pixels = preprocessed_with_mask[ring_mask > 0]
+            white_pixel_ratio = (
+                float(np.sum(ring_pixels == 255) / len(ring_pixels))
+                if len(ring_pixels) > 0
+                else 0.0
+            )
+            masked = cv2.bitwise_and(preprocessed_with_mask, preprocessed_with_mask, mask=ring_mask)
+            charges, total_blobs = detector._count_blobs(masked)
+
+            info.update(
+                {
+                    "has_ultimate_crop": True,
+                    "charges": int(charges),
+                    "total_blobs": int(total_blobs),
+                    "white_pixel_ratio": white_pixel_ratio,
+                    "is_full_by_ratio": bool(white_pixel_ratio >= detector.fullness_threshold),
+                    "center": [int(center[0]), int(center[1])],
+                }
+            )
+
+            if player_index == slot_idx:
+                write_image("ultimate_crop.png", ultimate_crop)
+                write_image("ultimate_preprocessed.png", preprocessed_with_mask)
+                write_image("ultimate_ring_mask.png", ring_mask)
+                write_image("ultimate_masked.png", masked)
+
+            return info
+
+        slot_debug = []
+        try:
+            player_crops = detector.cropper.crop_player_info_preround(frame)
+            for player_index, player_crop_data in enumerate(player_crops):
+                slot_debug.append(build_ultimate_debug(player_index, player_crop_data))
+                if player_index == slot_idx:
+                    for crop_name, crop in player_crop_data.items():
+                        if crop_name == "side":
+                            continue
+                        write_image(f"slot{slot_idx}_{crop_name}.png", crop)
+        except Exception as debug_exc:
+            slot_debug.append({"debug_capture_error": repr(debug_exc)})
+
+        context = {
+            "error_type": type(exc).__name__,
+            "error": str(exc),
+            "timestamp": timestamp,
+            "timecode": fmt_time(timestamp),
+            "phase": self.current_phase.name if self.current_phase else None,
+            "round_number": self.round_manager.current_round,
+            "score": self.round_manager.current_score,
+            "detector": type(detector).__name__,
+            "slot_idx": slot_idx,
+            "side": side,
+            "detected_agent": detected_agent,
+            "detected_side": detected_side,
+            "expected_side": expected_side,
+            "slot_team_name": slot_team_name,
+            "matched_player": matching_tracker.metadata,
+            "fallback": {
+                "action": "kept_previous_ultimate",
+                "previous_ultimate": matching_tracker.current_state.get("ultimate"),
+            },
+            "detector_settings": {
+                "brightness_threshold": detector.brightness_threshold,
+                "center_mask_radius": detector.center_mask_radius,
+                "ring_inner_radius": detector.ring_inner_radius,
+                "ring_outer_radius": detector.ring_outer_radius,
+                "fullness_threshold": detector.fullness_threshold,
+                "min_blob_area": detector.min_blob_area,
+                "max_blob_area": detector.max_blob_area,
+                "min_circularity": detector.min_circularity,
+            },
+            "slots": slot_debug,
+        }
+
+        write_image("frame.jpg", frame)
+        (debug_dir / "error.json").write_text(
+            json.dumps(context, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        (debug_dir / "traceback.txt").write_text(traceback.format_exc(), encoding="utf-8")
+        log.error(f"Saved validation debug bundle: {debug_dir}")
 
     def _process_active_round(
         self, timestamp: float, frame: np.ndarray, phase_detections: dict

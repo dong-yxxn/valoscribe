@@ -13,10 +13,12 @@
 #    - Removes VOD to save space
 #
 # Usage:
-#   ./process_vlr_series.sh <vlr_url> [output_base_dir]
+#   ./process_vlr_series.sh <vlr_url> [output_base_dir] [--keep-map-video] [--parallel-processes [N]] [--extract-round-clips]
 #
 # Example:
-#   ./process_vlr_series.sh "https://www.vlr.gg/542272/..." ./output
+#   ./process_vlr_series.sh "https://www.vlr.gg/542272/..." ./output --keep-map-video
+#   ./process_vlr_series.sh "https://www.vlr.gg/542272/..." ./output --parallel-processes
+#   ./process_vlr_series.sh "https://www.vlr.gg/542272/..." ./output --extract-round-clips
 ################################################################################
 
 set -e  # Exit on error
@@ -54,15 +56,110 @@ log_step() {
     echo -e "${CYAN}[STEP]${NC} $1"
 }
 
+extract_round_clips_for_map() {
+    local map_num="$1"
+    local process_video="$2"
+    local output_dir="$3"
+    local map_dir="$4"
+
+    local event_log_file="$output_dir/event_log.jsonl"
+    local round_video_dir="$map_dir/video/rounds"
+    local round_log_dir="$output_dir/rounds"
+
+    if [ ! -f "$process_video" ]; then
+        log_error "[Map $map_num] Cannot extract round clips; video not found: $process_video"
+        return 1
+    fi
+
+    if [ ! -f "$event_log_file" ]; then
+        log_error "[Map $map_num] Cannot extract round clips; event log not found: $event_log_file"
+        return 1
+    fi
+
+    log_info "[Map $map_num] Extracting round clips..."
+    python3 "$SCRIPT_DIR/extract_round_clips.py" \
+        --video "$process_video" \
+        --events "$event_log_file" \
+        --video-output "$round_video_dir" \
+        --log-output "$round_log_dir" \
+        --pre-padding "$ROUND_PRE_PADDING" \
+        --post-padding "$ROUND_POST_PADDING"
+}
+
 # Check arguments
 if [ $# -lt 1 ]; then
-    log_error "Usage: $0 <vlr_url> [output_base_dir]"
+    log_error "Usage: $0 <vlr_url> [output_base_dir] [--keep-map-video] [--parallel-processes [N]] [--extract-round-clips]"
     log_info "Example: $0 'https://www.vlr.gg/542272/...' ./output"
+    log_info "Example: $0 'https://www.vlr.gg/542272/...' ./output --keep-map-video"
+    log_info "Example: $0 'https://www.vlr.gg/542272/...' ./output --parallel-processes"
+    log_info "Example: $0 'https://www.vlr.gg/542272/...' ./output --extract-round-clips"
     exit 1
 fi
 
 VLR_URL="$1"
-OUTPUT_BASE_DIR="${2:-./series_output}"
+shift
+
+OUTPUT_BASE_DIR="./series_output"
+KEEP_MAP_VIDEO=false
+PARALLEL_PROCESSES=""
+EXTRACT_ROUND_CLIPS=false
+ROUND_PRE_PADDING=0
+ROUND_POST_PADDING=0
+
+while [ $# -gt 0 ]; do
+    case "$1" in
+        --keep-map-video)
+            KEEP_MAP_VIDEO=true
+            ;;
+        --parallel-processes)
+            PARALLEL_PROCESSES="auto"
+            if [ $# -gt 1 ] && [[ "$2" =~ ^[0-9]+$ ]]; then
+                PARALLEL_PROCESSES="$2"
+                shift
+            fi
+            ;;
+        --extract-round-clips)
+            EXTRACT_ROUND_CLIPS=true
+            ;;
+        --round-pre-padding)
+            if [ $# -lt 2 ]; then
+                log_error "--round-pre-padding requires a value"
+                exit 1
+            fi
+            ROUND_PRE_PADDING="$2"
+            shift
+            ;;
+        --round-post-padding)
+            if [ $# -lt 2 ]; then
+                log_error "--round-post-padding requires a value"
+                exit 1
+            fi
+            ROUND_POST_PADDING="$2"
+            shift
+            ;;
+        -*)
+            log_error "Unknown option: $1"
+            log_error "Usage: $0 <vlr_url> [output_base_dir] [--keep-map-video] [--parallel-processes [N]] [--extract-round-clips]"
+            exit 1
+            ;;
+        *)
+            OUTPUT_BASE_DIR="$1"
+            ;;
+    esac
+    shift
+done
+
+if [ -n "$PARALLEL_PROCESSES" ]; then
+    if [ "$PARALLEL_PROCESSES" != "auto" ] && [ "$PARALLEL_PROCESSES" -lt 1 ]; then
+        log_error "--parallel-processes must be greater than 0"
+        exit 1
+    fi
+    KEEP_MAP_VIDEO=true
+fi
+
+if [ "$EXTRACT_ROUND_CLIPS" = true ]; then
+    KEEP_MAP_VIDEO=true
+fi
 
 # Extract match ID from URL for unique directory naming
 # Format: https://www.vlr.gg/542265/team1-vs-team2-event
@@ -78,6 +175,21 @@ log_info "Starting VLR series processing pipeline"
 log_info "VLR URL: $VLR_URL"
 log_info "Match ID: $MATCH_ID"
 log_info "Output directory: $OUTPUT_BASE_DIR"
+if [ "$KEEP_MAP_VIDEO" = true ]; then
+    log_info "Keep map videos: Yes"
+else
+    log_info "Keep map videos: No"
+fi
+if [ -n "$PARALLEL_PROCESSES" ]; then
+    log_info "Parallel processing: Yes (${PARALLEL_PROCESSES})"
+else
+    log_info "Parallel processing: No"
+fi
+if [ "$EXTRACT_ROUND_CLIPS" = true ]; then
+    log_info "Extract round clips: Yes (pre=${ROUND_PRE_PADDING}s, post=${ROUND_POST_PADDING}s)"
+else
+    log_info "Extract round clips: No"
+fi
 echo ""
 
 ################################################################################
@@ -152,6 +264,14 @@ echo ""
 
 log_step "Step 4: Processing individual maps"
 
+PROCESS_MAP_NUMS=()
+PROCESS_MAP_NAMES=()
+PROCESS_MAP_METADATA=()
+PROCESS_MAP_DIRS=()
+PROCESS_OUTPUT_DIRS=()
+PROCESS_VIDEO_FILES=()
+PROCESS_LOG_FILES=()
+
 # Process each map
 for ((i=1; i<=NUM_MAPS; i++)); do
     echo ""
@@ -187,11 +307,14 @@ for ((i=1; i<=NUM_MAPS; i++)); do
     log_info "Map directory: $MAP_DIR"
 
     # Define paths
-    VOD_DOWNLOAD_DIR="$TEMP_DIR/videos"
+    VOD_DOWNLOAD_DIR="$TEMP_DIR/map${i}/videos"
     mkdir -p "$VOD_DOWNLOAD_DIR"
 
     OUTPUT_DIR="$MAP_DIR/output"
     mkdir -p "$OUTPUT_DIR"
+
+    MAP_VIDEO_DIR="$MAP_DIR/video"
+    MAP_VIDEO_FILE="$MAP_VIDEO_DIR/map${i}_full.mp4"
 
     # Create log file for this map
     LOG_FILE="$OUTPUT_DIR/processing.log"
@@ -202,13 +325,31 @@ for ((i=1; i<=NUM_MAPS; i++)); do
 
     FRAME_STATES_FILE="$OUTPUT_DIR/frame_states.csv"
     EVENT_LOG_FILE="$OUTPUT_DIR/event_log.jsonl"
+    RUN_ORCHESTRATION=true
 
     if [ -f "$FRAME_STATES_FILE" ] && [ -f "$EVENT_LOG_FILE" ]; then
-        log_success "[Map $i] Output already exists, skipping processing"
-        log_info "  - $FRAME_STATES_FILE"
-        log_info "  - $EVENT_LOG_FILE"
-        log_info "  - $LOG_FILE (existing log)"
-        continue
+        if [ "$KEEP_MAP_VIDEO" = true ] && [ ! -f "$MAP_VIDEO_FILE" ]; then
+            log_warning "[Map $i] Output already exists, but map video is missing"
+            log_info "  - $FRAME_STATES_FILE"
+            log_info "  - $EVENT_LOG_FILE"
+            log_info "  - Will download and save video only: $MAP_VIDEO_FILE"
+            RUN_ORCHESTRATION=false
+        elif [ "$EXTRACT_ROUND_CLIPS" = true ]; then
+            log_success "[Map $i] Output already exists, will extract round clips"
+            log_info "  - $FRAME_STATES_FILE"
+            log_info "  - $EVENT_LOG_FILE"
+            log_info "  - $MAP_VIDEO_FILE"
+            RUN_ORCHESTRATION=false
+        else
+            log_success "[Map $i] Output already exists, skipping processing"
+            log_info "  - $FRAME_STATES_FILE"
+            log_info "  - $EVENT_LOG_FILE"
+            log_info "  - $LOG_FILE (existing log)"
+            if [ "$KEEP_MAP_VIDEO" = true ]; then
+                log_info "  - $MAP_VIDEO_FILE"
+            fi
+            continue
+        fi
     fi
 
     # Start logging for this map
@@ -229,58 +370,125 @@ for ((i=1; i<=NUM_MAPS; i++)); do
     # Step 4a: Download YouTube VOD
     #---------------------------------------------------------------------------
 
-    log_info "[Map $i] Downloading YouTube VOD..."
+    PROCESS_VIDEO=""
+    VOD_FILE=""
 
-    # Check for optional start_time and duration in metadata (for livestream clips)
-    START_TIME=$(jq -r '.start_time // empty' "$MAP_METADATA" 2>/dev/null || echo "")
-    DURATION=$(jq -r '.duration // empty' "$MAP_METADATA" 2>/dev/null || echo "")
+    if [ "$KEEP_MAP_VIDEO" = true ] && [ -f "$MAP_VIDEO_FILE" ]; then
+        PROCESS_VIDEO="$MAP_VIDEO_FILE"
+        log_success "[Map $i] Existing map video found: $MAP_VIDEO_FILE"
+    else
+        log_info "[Map $i] Downloading YouTube VOD..."
 
-    # Build download command with optional timestamp parameters
-    DOWNLOAD_CMD="valoscribe download \"$VOD_URL\" -o \"$VOD_DOWNLOAD_DIR\" --height 1080 --fps 60"
-    if [ -n "$START_TIME" ]; then
-        DOWNLOAD_CMD="$DOWNLOAD_CMD --start $START_TIME"
-        log_info "  Start time: ${START_TIME}s (from metadata)"
+        # Check for optional start_time and duration in metadata (for livestream clips)
+        START_TIME=$(jq -r '.start_time // empty' "$MAP_METADATA" 2>/dev/null || echo "")
+        DURATION=$(jq -r '.duration // empty' "$MAP_METADATA" 2>/dev/null || echo "")
+
+        # Build download command with optional timestamp parameters
+        DOWNLOAD_CMD="valoscribe download \"$VOD_URL\" -o \"$VOD_DOWNLOAD_DIR\" --height 1080 --fps 60"
+        if [ -n "$START_TIME" ]; then
+            DOWNLOAD_CMD="$DOWNLOAD_CMD --start $START_TIME"
+            log_info "  Start time: ${START_TIME}s (from metadata)"
+        fi
+        if [ -n "$DURATION" ]; then
+            DOWNLOAD_CMD="$DOWNLOAD_CMD --duration $DURATION"
+            log_info "  Duration: ${DURATION}s (from metadata)"
+        fi
+
+        # Execute download
+        set +e
+        eval $DOWNLOAD_CMD
+        DOWNLOAD_STATUS=$?
+        set -e
+
+        if [ "$DOWNLOAD_STATUS" -ne 0 ]; then
+            log_error "[Map $i] Failed to download VOD"
+            echo ""
+            echo "========================================================================="
+            echo "Map $i Processing Failed"
+            echo "Finished: $(date)"
+            echo "========================================================================="
+            exec 1>&3 2>&4 3>&- 4>&-
+            continue
+        fi
+
+        # Find the downloaded video file (most recent .mp4 in download dir)
+        # Use ls -t which works on both macOS and Linux
+        VOD_FILE=$(ls -t "$VOD_DOWNLOAD_DIR"/*.mp4 2>/dev/null | head -1)
+
+        if [ -z "$VOD_FILE" ] || [ ! -f "$VOD_FILE" ]; then
+            log_error "[Map $i] Failed to download VOD"
+            echo ""
+            echo "========================================================================="
+            echo "Map $i Processing Failed"
+            echo "Finished: $(date)"
+            echo "========================================================================="
+            exec 1>&3 2>&4 3>&- 4>&-
+            continue
+        fi
+
+        log_success "[Map $i] VOD downloaded: $(basename "$VOD_FILE")"
+
+        # Preserve the full map video in the map folder when requested.
+        # Use mv so we do not duplicate several GB of video data.
+        PROCESS_VIDEO="$VOD_FILE"
+        if [ "$KEEP_MAP_VIDEO" = true ]; then
+            mkdir -p "$MAP_VIDEO_DIR"
+            if [ -f "$MAP_VIDEO_FILE" ]; then
+                log_warning "[Map $i] Existing map video will be overwritten: $MAP_VIDEO_FILE"
+                rm -f "$MAP_VIDEO_FILE"
+            fi
+            mv "$VOD_FILE" "$MAP_VIDEO_FILE"
+            PROCESS_VIDEO="$MAP_VIDEO_FILE"
+            log_success "[Map $i] Map video saved: $MAP_VIDEO_FILE"
+        fi
     fi
-    if [ -n "$DURATION" ]; then
-        DOWNLOAD_CMD="$DOWNLOAD_CMD --duration $DURATION"
-        log_info "  Duration: ${DURATION}s (from metadata)"
-    fi
-
-    # Execute download
-    eval $DOWNLOAD_CMD
-
-    # Find the downloaded video file (most recent .mp4 in download dir)
-    # Use ls -t which works on both macOS and Linux
-    VOD_FILE=$(ls -t "$VOD_DOWNLOAD_DIR"/*.mp4 2>/dev/null | head -1)
-
-    if [ -z "$VOD_FILE" ] || [ ! -f "$VOD_FILE" ]; then
-        log_error "[Map $i] Failed to download VOD"
-        continue
-    fi
-
-    log_success "[Map $i] VOD downloaded: $(basename "$VOD_FILE")"
 
     #---------------------------------------------------------------------------
     # Step 4b: Run orchestration
     #---------------------------------------------------------------------------
 
-    log_info "[Map $i] Running orchestration (this may take a while)..."
+    PROCESS_SUCCEEDED=false
 
-    # Run orchestration with quiet mode (only show events)
-    valoscribe orchestrate process-vod "$VOD_FILE" "$MAP_METADATA" \
-        --output "$OUTPUT_DIR" \
-        --fps 4 \
-        --quiet \
-        --mute-agent-detector
-        # --show
+    if [ -n "$PARALLEL_PROCESSES" ]; then
+        if [ "$RUN_ORCHESTRATION" = true ]; then
+            PROCESS_MAP_NUMS+=("$i")
+            PROCESS_MAP_NAMES+=("$MAP_NAME")
+            PROCESS_MAP_METADATA+=("$MAP_METADATA")
+            PROCESS_MAP_DIRS+=("$MAP_DIR")
+            PROCESS_OUTPUT_DIRS+=("$OUTPUT_DIR")
+            PROCESS_VIDEO_FILES+=("$PROCESS_VIDEO")
+            PROCESS_LOG_FILES+=("$LOG_FILE")
+            log_success "[Map $i] Queued for parallel processing"
+        else
+            log_info "[Map $i] Skipping orchestration because output already exists"
+            PROCESS_SUCCEEDED=true
+        fi
+    elif [ "$RUN_ORCHESTRATION" = true ]; then
+        log_info "[Map $i] Running orchestration (this may take a while)..."
 
-    if [ $? -eq 0 ]; then
-        log_success "[Map $i] Orchestration completed successfully"
-        log_info "[Map $i] Output files:"
-        log_info "  - $OUTPUT_DIR/frame_states.csv"
-        log_info "  - $OUTPUT_DIR/event_log.jsonl"
+        # Run orchestration with quiet mode (only show events)
+        set +e
+        valoscribe orchestrate process-vod "$PROCESS_VIDEO" "$MAP_METADATA" \
+            --output "$OUTPUT_DIR" \
+            --fps 4 \
+            --quiet \
+            --mute-agent-detector
+            # --show
+        ORCHESTRATION_STATUS=$?
+        set -e
+
+        if [ "$ORCHESTRATION_STATUS" -eq 0 ]; then
+            log_success "[Map $i] Orchestration completed successfully"
+            log_info "[Map $i] Output files:"
+            log_info "  - $OUTPUT_DIR/frame_states.csv"
+            log_info "  - $OUTPUT_DIR/event_log.jsonl"
+            PROCESS_SUCCEEDED=true
+        else
+            log_error "[Map $i] Orchestration failed"
+        fi
     else
-        log_error "[Map $i] Orchestration failed"
+        log_info "[Map $i] Skipping orchestration because output already exists"
+        PROCESS_SUCCEEDED=true
     fi
 
     #---------------------------------------------------------------------------
@@ -289,13 +497,25 @@ for ((i=1; i<=NUM_MAPS; i++)); do
 
     cp "$MAP_METADATA" "$MAP_DIR/metadata.json"
 
+    if [ "$EXTRACT_ROUND_CLIPS" = true ] && [ "$PROCESS_SUCCEEDED" = true ]; then
+        if extract_round_clips_for_map "$i" "$PROCESS_VIDEO" "$OUTPUT_DIR" "$MAP_DIR"; then
+            log_success "[Map $i] Round clips extracted"
+        else
+            log_error "[Map $i] Round clip extraction failed"
+        fi
+    fi
+
     #---------------------------------------------------------------------------
     # Step 4d: Remove VOD to save space
     #---------------------------------------------------------------------------
 
-    log_info "[Map $i] Removing VOD to save space..."
-    rm -f "$VOD_FILE"
-    log_success "[Map $i] VOD removed"
+    if [ "$KEEP_MAP_VIDEO" = true ]; then
+        log_info "[Map $i] Keeping map video: $MAP_VIDEO_FILE"
+    else
+        log_info "[Map $i] Removing VOD to save space..."
+        rm -f "$VOD_FILE"
+        log_success "[Map $i] VOD removed"
+    fi
 
     # Close log file and restore stdout/stderr
     echo ""
@@ -311,6 +531,121 @@ for ((i=1; i<=NUM_MAPS; i++)); do
 
     echo ""
 done
+
+if [ -n "$PARALLEL_PROCESSES" ]; then
+    echo ""
+    echo "========================================================================"
+    log_step "Step 4b: Processing downloaded maps in parallel"
+    echo "========================================================================"
+
+    QUEUED_MAPS=${#PROCESS_MAP_NUMS[@]}
+
+    if [ "$QUEUED_MAPS" -eq 0 ]; then
+        log_info "No maps queued for processing"
+    else
+        if [ "$PARALLEL_PROCESSES" = "auto" ]; then
+            MAX_PARALLEL="$QUEUED_MAPS"
+        else
+            MAX_PARALLEL="$PARALLEL_PROCESSES"
+        fi
+
+        if [ "$MAX_PARALLEL" -lt 1 ]; then
+            log_error "--parallel-processes must be greater than 0"
+            exit 1
+        fi
+
+        log_info "Queued maps: $QUEUED_MAPS"
+        log_info "Max parallel processes: $MAX_PARALLEL"
+
+        PIDS=()
+
+        for ((idx=0; idx<QUEUED_MAPS; idx++)); do
+            while [ "$(jobs -pr | wc -l | tr -d ' ')" -ge "$MAX_PARALLEL" ]; do
+                sleep 2
+            done
+
+            MAP_NUM="${PROCESS_MAP_NUMS[$idx]}"
+            MAP_NAME="${PROCESS_MAP_NAMES[$idx]}"
+            MAP_METADATA="${PROCESS_MAP_METADATA[$idx]}"
+            MAP_DIR="${PROCESS_MAP_DIRS[$idx]}"
+            OUTPUT_DIR="${PROCESS_OUTPUT_DIRS[$idx]}"
+            PROCESS_VIDEO="${PROCESS_VIDEO_FILES[$idx]}"
+            LOG_FILE="${PROCESS_LOG_FILES[$idx]}"
+
+            (
+                {
+                    echo ""
+                    echo "========================================================================="
+                    echo "Map $MAP_NUM Parallel Orchestration Log"
+                    echo "========================================================================="
+                    echo "Map: $MAP_NAME"
+                    echo "Video: $PROCESS_VIDEO"
+                    echo "Started: $(date)"
+                    echo "========================================================================="
+                    echo ""
+
+                    log_info "[Map $MAP_NUM] Running orchestration (parallel worker)..."
+
+                    set +e
+                    valoscribe orchestrate process-vod "$PROCESS_VIDEO" "$MAP_METADATA" \
+                        --output "$OUTPUT_DIR" \
+                        --fps 4 \
+                        --quiet \
+                        --mute-agent-detector
+                    STATUS=$?
+                    set -e
+
+                    if [ "$STATUS" -eq 0 ]; then
+                        log_success "[Map $MAP_NUM] Orchestration completed successfully"
+                        log_info "[Map $MAP_NUM] Output files:"
+                        log_info "  - $OUTPUT_DIR/frame_states.csv"
+                        log_info "  - $OUTPUT_DIR/event_log.jsonl"
+
+                        cp "$MAP_METADATA" "$MAP_DIR/metadata.json"
+                        log_success "[Map $MAP_NUM] Metadata copied"
+
+                        if [ "$EXTRACT_ROUND_CLIPS" = true ]; then
+                            if extract_round_clips_for_map "$MAP_NUM" "$PROCESS_VIDEO" "$OUTPUT_DIR" "$MAP_DIR"; then
+                                log_success "[Map $MAP_NUM] Round clips extracted"
+                            else
+                                log_error "[Map $MAP_NUM] Round clip extraction failed"
+                                STATUS=1
+                            fi
+                        fi
+                    else
+                        log_error "[Map $MAP_NUM] Orchestration failed"
+                    fi
+
+                    echo ""
+                    echo "========================================================================="
+                    echo "Map $MAP_NUM Parallel Processing Complete"
+                    echo "Finished: $(date)"
+                    echo "========================================================================="
+
+                    exit "$STATUS"
+                } >> "$LOG_FILE" 2>&1
+            ) &
+
+            WORKER_PID="$!"
+            PIDS+=("$WORKER_PID")
+            log_info "[Map $MAP_NUM] Started parallel worker (pid $WORKER_PID), log: $LOG_FILE"
+        done
+
+        FAILURES=0
+        for PID in "${PIDS[@]}"; do
+            if ! wait "$PID"; then
+                FAILURES=$((FAILURES + 1))
+            fi
+        done
+
+        if [ "$FAILURES" -gt 0 ]; then
+            log_error "$FAILURES parallel map processing job(s) failed"
+            exit 1
+        fi
+
+        log_success "Parallel map processing completed successfully"
+    fi
+fi
 
 ################################################################################
 # Step 5: Cleanup and summary
