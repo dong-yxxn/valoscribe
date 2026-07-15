@@ -29,6 +29,9 @@ The demo shows the terminal output side-by-side with the game footage, displayin
 - **Fully Automated** - Provide a VLR.gg match URL, get structured event logs and frame states
 - **VLR.gg Integration** - Automatic scraping of match metadata (teams, players, agents, maps)
 - **YouTube Support** - Direct VOD download with timestamp support for individual maps
+- **Round Clip Extraction** - Save full map VODs and cut each map into per-round videos/logs
+- **Round Transcription** - Transcribe round clips with faster-whisper and metadata-aware prompts
+- **Highlight Generation** - Score event-log moments, export top highlight clips, and build a map-level highlight reel
 - **Phase Detection** - Intelligent state machine for detecting preround, active round, and post-round phases
 - **Template Matching** - Robust agent detection with attack/defense variants for handling mirror compositions
 - **State Validation** - Prevents false positives through multi-condition validation
@@ -86,6 +89,10 @@ valoscribe/
 │   └── video/              # YouTube download and frame reading
 ├── scripts/                # Batch processing scripts
 │   ├── process_vlr_series.sh        # Process entire series from VLR URL
+│   ├── extract_round_clips.py       # Cut map videos into round clips/logs
+│   ├── transcribe_rounds.py         # Transcribe round clips with faster-whisper
+│   ├── extract_highlights.py        # Generate highlight clips/reels
+│   ├── HIGHLIGHT_EXTRACTION.md      # Highlight scoring and visualization notes
 │   └── process_all_series_parallel.sh  # Parallel batch processing
 └── tests/                  # Unit and integration tests
 ```
@@ -95,6 +102,14 @@ valoscribe/
 ### Prerequisites
 
 - **Python 3.10+**
+- **ffmpeg** - Required for YouTube format merging and clip extraction
+  ```bash
+  # macOS
+  brew install ffmpeg
+
+  # Ubuntu/Debian
+  sudo apt-get install ffmpeg
+  ```
 - **Tesseract OCR** - Required for killfeed text extraction
   ```bash
   # macOS
@@ -108,6 +123,14 @@ valoscribe/
   ```
 
 - **yt-dlp** - Already included in dependencies for YouTube downloads
+- **jq** - Required by the series processing shell scripts
+  ```bash
+  # macOS
+  brew install jq
+
+  # Ubuntu/Debian
+  sudo apt-get install jq
+  ```
 
 ### Install Valoscribe
 
@@ -145,32 +168,212 @@ pip install -e .
 ### Verify Installation
 
 ```bash
-valoscribe --help
+uv run valoscribe --help
 ```
 
 ## Usage
 
-### Quick Start: Process an Entire Series
+### Quick Start: VLR URL to Round Clips
 
-The easiest way to process matches is using the VLR.gg integration:
+The easiest path is to start from a VLR.gg match page. The series script scrapes metadata, downloads each map VOD, processes event logs, saves full map videos, and optionally cuts per-round clips.
 
 ```bash
-# Process all maps from a VLR.gg match page
-./scripts/process_vlr_series.sh https://www.vlr.gg/12345/team-a-vs-team-b
-
-# This will:
-# 1. Scrape match metadata from VLR.gg
-# 2. Download VODs from YouTube
-# 3. Process each map
-# 4. Output structured event logs and frame states
+uv run ./scripts/process_vlr_series.sh \
+  "https://www.vlr.gg/686185/dplus-esports-vs-arete-challengers-2026-korea-wdg-split-2-w1" \
+  ./series_output \
+  --extract-round-clips \
+  --parallel-processes
 ```
 
-### Individual Commands
+What this does:
+
+1. Scrapes VLR.gg metadata into `series_output/.temp_<match_id>/series_metadata.json`
+2. Splits map metadata into `series_output/<match_id>_<team1>_vs_<team2>/metadata/mapN.json`
+3. Downloads map VODs sequentially
+4. Saves full map videos as `mapN_<mapname>/video/mapN_full.mp4`
+5. Processes each map into `output/event_log.jsonl` and `output/frame_states.csv`
+6. Extracts round clips into `mapN_<mapname>/video/rounds/roundXX.mp4`
+7. Extracts per-round event logs into `mapN_<mapname>/output/rounds/roundXX.log`
+
+`--parallel-processes` without a number automatically uses the number of downloaded maps. To cap concurrency:
+
+```bash
+uv run ./scripts/process_vlr_series.sh \
+  "https://www.vlr.gg/686185/dplus-esports-vs-arete-challengers-2026-korea-wdg-split-2-w1" \
+  ./series_output \
+  --extract-round-clips \
+  --parallel-processes 2
+```
+
+If you want full map videos saved but do not need round clips:
+
+```bash
+uv run ./scripts/process_vlr_series.sh \
+  "https://www.vlr.gg/686185/dplus-esports-vs-arete-challengers-2026-korea-wdg-split-2-w1" \
+  ./series_output \
+  --keep-map-video
+```
+
+Round clip padding can be adjusted:
+
+```bash
+uv run ./scripts/process_vlr_series.sh \
+  "https://www.vlr.gg/686185/dplus-esports-vs-arete-challengers-2026-korea-wdg-split-2-w1" \
+  ./series_output \
+  --extract-round-clips \
+  --round-pre-padding 1 \
+  --round-post-padding 2
+```
+
+### Output Layout
+
+After processing, a match directory looks like:
+
+```text
+series_output/
+└── 686185_dplus_esports_vs_arete/
+    ├── metadata/
+    │   ├── map1.json
+    │   ├── map2.json
+    │   └── map3.json
+    ├── map1_split/
+    │   ├── metadata.json
+    │   ├── video/
+    │   │   ├── map1_full.mp4
+    │   │   └── rounds/
+    │   │       ├── round01.mp4
+    │   │       └── ...
+    │   └── output/
+    │       ├── event_log.jsonl
+    │       ├── frame_states.csv
+    │       └── rounds/
+    │           ├── round01.log
+    │           └── ...
+    ├── map2_breeze/
+    └── map3_lotus/
+```
+
+### Process One Map Manually
+
+If you already have a map video and metadata, run orchestration directly:
+
+```bash
+uv run valoscribe orchestrate process-vod \
+  "series_output/686185_dplus_esports_vs_arete/map3_lotus/video/map3_full.mp4" \
+  "series_output/686185_dplus_esports_vs_arete/map3_lotus/metadata.json" \
+  --output "series_output/686185_dplus_esports_vs_arete/map3_lotus/output"
+```
+
+Useful debug options:
+
+```bash
+uv run valoscribe orchestrate process-vod \
+  "path/to/map_full.mp4" \
+  "path/to/metadata.json" \
+  --output ./debug_output \
+  --show \
+  --debug-phase
+```
+
+### Extract Round Clips From Existing Outputs
+
+If `event_log.jsonl` and `mapN_full.mp4` already exist, you can cut round clips directly:
+
+```bash
+uv run python scripts/extract_round_clips.py \
+  --video series_output/686185_dplus_esports_vs_arete/map3_lotus/video/map3_full.mp4 \
+  --events series_output/686185_dplus_esports_vs_arete/map3_lotus/output/event_log.jsonl \
+  --video-output series_output/686185_dplus_esports_vs_arete/map3_lotus/video/rounds \
+  --log-output series_output/686185_dplus_esports_vs_arete/map3_lotus/output/rounds \
+  --pre-padding 0 \
+  --post-padding 0
+```
+
+### Transcribe Round Clips
+
+Round transcription uses `faster-whisper`. The script reads round videos, metadata, and optional round logs. Metadata and event logs are used to build glossary prompts and to link transcript terms back to known teams, players, agents, abilities, and weapons.
+
+Transcribe one round first:
+
+```bash
+uv run python scripts/transcribe_rounds.py \
+  --round-video-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/video/rounds \
+  --metadata series_output/686185_dplus_esports_vs_arete/map3_lotus/metadata.json \
+  --round-log-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/output/rounds \
+  --output-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/output/transcripts \
+  --model large-v3 \
+  --language ko \
+  --round 1 \
+  --overwrite
+```
+
+Transcribe all rounds with two worker processes:
+
+```bash
+uv run python scripts/transcribe_rounds.py \
+  --round-video-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/video/rounds \
+  --metadata series_output/686185_dplus_esports_vs_arete/map3_lotus/metadata.json \
+  --round-log-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/output/rounds \
+  --output-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/output/transcripts \
+  --model large-v3 \
+  --language ko \
+  --parallel-workers 2 \
+  --overwrite
+```
+
+Notes:
+
+- Each parallel worker loads its own Whisper model.
+- `large-v3` gives better quality but uses more memory.
+- Use `--round 1` or `--limit 3` for quick checks.
+- Output files are `roundXX.jsonl`.
+- Each transcript row includes `text`, `text_raw`, `entity_links`, and `entity_candidates` when entity linking finds matches.
+
+### Extract Highlights
+
+Highlight extraction reads `roundXX.log` and `roundXX.mp4`, scores candidate moments, merges nearby candidate scenes, exports top clips, and creates a map-level highlight reel.
+
+```bash
+uv run python scripts/extract_highlights.py \
+  --round-video-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/video/rounds \
+  --round-log-dir series_output/686185_dplus_esports_vs_arete/map3_lotus/output/rounds \
+  --video-output series_output/686185_dplus_esports_vs_arete/map3_lotus/video/highlights \
+  --manifest-output series_output/686185_dplus_esports_vs_arete/map3_lotus/output/highlights/manifest.json \
+  --top-n 12 \
+  --clean-output \
+  --overwrite
+```
+
+Outputs:
+
+```text
+map3_lotus/video/highlights/
+├── highlight_001_r01_....mp4
+├── highlight_002_r03_....mp4
+├── ...
+└── highlight_map3.mp4
+
+map3_lotus/output/highlights/
+└── manifest.json
+```
+
+Selection behavior:
+
+- Top N candidates are selected by score.
+- Final clip numbering is reordered by round number and in-round timeline.
+- `score_rank` in the manifest preserves score order.
+- `rank` and filenames use timeline order.
+- Nearby candidates in the same round are merged by default.
+- Defaults: `--pre-padding 1`, `--post-padding 0`, `--round-end-padding 3`, `--merge-gap 6`.
+
+See [scripts/HIGHLIGHT_EXTRACTION.md](scripts/HIGHLIGHT_EXTRACTION.md) for scoring formulas and demo visualization ideas.
+
+### Useful CLI Commands
 
 #### 1. Scrape Match Metadata from VLR.gg
 
 ```bash
-valoscribe scrape-vlr https://www.vlr.gg/12345/team-a-vs-team-b \
+uv run valoscribe scrape-vlr https://www.vlr.gg/12345/team-a-vs-team-b \
   --output ./output/metadata.json
 ```
 
@@ -179,39 +382,33 @@ Outputs team names, player names, agents, maps, VOD URLs, and starting sides.
 #### 2. Download VOD from YouTube
 
 ```bash
-valoscribe orchestrate download \
-  --youtube-url "https://www.youtube.com/watch?v=..." \
-  --output-dir ./vods \
-  --start-time 00:15:30 \
-  --end-time 01:45:20
+uv run valoscribe download "https://youtu.be/VIDEO_ID?t=1234" \
+  -o ./vods \
+  --height 1080 \
+  --fps 60
 ```
 
 Options:
-- `--start-time` / `--end-time` - Extract specific map segments (optional)
-- `--quality` - Video quality preference (default: 1080p)
+- timestamped YouTube URLs are supported
+- `--height` sets target height
+- `--fps` sets target FPS
 
-#### 3. Process a VOD
+#### 3. Split Series Metadata
 
 ```bash
-valoscribe orchestrate process \
-  --video-path ./vods/match.mp4 \
-  --metadata-path ./output/metadata.json \
-  --hud-config src/valoscribe/config/champs2025.json \
-  --output-dir ./series_output/match_name/map1_ascent \
-  --sample-rate 4
+uv run valoscribe split-metadata \
+  series_output/.temp_686185/series_metadata.json \
+  series_output/686185_dplus_esports_vs_arete/metadata
 ```
 
-Key options:
-- `--video-path` - Path to downloaded VOD
-- `--metadata-path` - VLR.gg metadata JSON
-- `--hud-config` - HUD coordinate configuration (use `champs2025.json` for 2025 Champions)
-- `--output-dir` - Directory for outputs
-- `--sample-rate` - Frames per second to process (default: 4)
-- `--quiet` - Suppress progress output
+#### 4. Process a VOD
 
-This generates:
-- `output/event_log.jsonl` - Timestamped game events
-- `output/frame_states.csv` - Frame-by-frame player states
+```bash
+uv run valoscribe orchestrate process-vod \
+  ./vods/map1.mp4 \
+  ./metadata/map1.json \
+  --output ./map1_output
+```
 
 ### Batch Processing
 
@@ -226,7 +423,7 @@ https://www.vlr.gg/12347/team-e-vs-team-f
 EOF
 
 # Process all matches with 6 parallel jobs
-./scripts/process_all_series_parallel.sh matches.txt 6
+uv run ./scripts/process_all_series_parallel.sh matches.txt 6
 ```
 
 ### Validate Outputs
@@ -248,19 +445,19 @@ Test individual detection components:
 
 ```bash
 # Test agent detection
-valoscribe detect agent \
+uv run valoscribe detect agent \
   --video ./vods/match.mp4 \
   --frame 1000 \
   --player-index 0
 
 # Test killfeed detection
-valoscribe detect killfeed \
+uv run valoscribe detect killfeed \
   --video ./vods/match.mp4 \
   --start-frame 5000 \
   --end-frame 5100
 
 # Test score detection
-valoscribe detect score \
+uv run valoscribe detect score \
   --video ./vods/match.mp4 \
   --frame 1000
 ```
@@ -288,7 +485,7 @@ uv run ruff format src/
 
 ## Output Format
 
-Valoscribe generates two output files per map:
+Valoscribe generates these main artifacts per map:
 
 ### 1. Event Log (`event_log.jsonl`)
 
@@ -313,9 +510,9 @@ JSONL format with one event per line. Each event is timestamped and includes rel
 {
   "type": "kill",
   "timestamp": 45.3,
-  "killer": "TenZ",
+  "killer_name": "TenZ",
   "killer_agent": "Jett",
-  "victim": "aspas",
+  "victim_name": "aspas",
   "victim_agent": "Raze",
   "weapon": "Vandal",
   "headshot": true
@@ -406,6 +603,103 @@ Match metadata scraped from VLR.gg:
 }
 ```
 
+### 4. Round Clips And Round Logs
+
+Round clip extraction creates one video and one adjusted event log per detected round:
+
+```text
+video/rounds/round01.mp4
+video/rounds/round02.mp4
+...
+output/rounds/round01.log
+output/rounds/round02.log
+...
+```
+
+Each `roundXX.log` is JSONL. Timestamps are rebased so `timestamp = 0.0` is the start of the round clip. The original map timestamp is preserved as `source_timestamp`.
+
+Example:
+
+```json
+{
+  "type": "kill",
+  "timestamp": 8.75,
+  "source_timestamp": 44.25,
+  "round_number": 1,
+  "killer_name": "JaebiN",
+  "victim_name": "CabezA",
+  "clip_start": 35.5,
+  "clip_end": 62.5
+}
+```
+
+### 5. Round Transcripts
+
+Round transcription creates one JSONL file per round:
+
+```text
+output/transcripts/round01.jsonl
+output/transcripts/round02.jsonl
+...
+```
+
+Each row is a Whisper segment:
+
+```json
+{
+  "segment_id": 0,
+  "round_number": 1,
+  "start": 0.0,
+  "end": 4.76,
+  "text": "허허, JaebiN.",
+  "text_raw": "허허, 재비.",
+  "source_video": "video/rounds/round01.mp4",
+  "model": "large-v3",
+  "language": "ko",
+  "entity_links": [
+    {
+      "surface": "재비",
+      "entity": "JaebiN",
+      "entity_type": "player",
+      "confidence": 1.0,
+      "method": "metadata_phonetic_event_link"
+    }
+  ]
+}
+```
+
+`text_raw` preserves the direct Whisper output. `text` is the metadata-linked version when the script can confidently map transcript terms to known match entities.
+
+### 6. Highlight Clips And Manifest
+
+Highlight extraction creates individual clips plus a map-level reel:
+
+```text
+video/highlights/highlight_001_r01_....mp4
+video/highlights/highlight_002_r03_....mp4
+video/highlights/highlight_map3.mp4
+output/highlights/manifest.json
+```
+
+The manifest explains why each highlight was selected:
+
+```json
+{
+  "rank": 1,
+  "score_rank": 2,
+  "round_number": 1,
+  "kind": "merged",
+  "reason": "merged nearby highlights: kill_burst, multi_kill, round_decider",
+  "score": 69.2,
+  "clip_start": 7.25,
+  "clip_end": 27.75,
+  "output_video": "video/highlights/highlight_001_r01_....mp4",
+  "reel_video": "video/highlights/highlight_map3.mp4"
+}
+```
+
+See [scripts/HIGHLIGHT_EXTRACTION.md](scripts/HIGHLIGHT_EXTRACTION.md) for the scoring and visualization plan.
+
 ## Configuration
 
 ### HUD Configs
@@ -418,14 +712,14 @@ If you need to process VODs with different HUD layouts:
 
 1. Extract template coordinates using the `extract` commands:
    ```bash
-   valoscribe extract agent-icon --video ./vods/match.mp4 --frame 1000 --player-index 0
+   uv run valoscribe extract agent-icon --video ./vods/match.mp4 --frame 1000 --player-index 0
    ```
 
 2. Create a new config JSON with updated coordinates
 
 3. Pass your config to the `orchestrate process` command:
    ```bash
-   valoscribe orchestrate process --hud-config ./custom_config.json ...
+   uv run valoscribe orchestrate process-vod ./vods/map1.mp4 ./metadata/map1.json --output ./map1_output
    ```
 
 ### Supported Tournaments
